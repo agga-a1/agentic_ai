@@ -1,0 +1,15 @@
+{
+  "registry_type": "private",
+  "vulnerability_scanning": {
+    "scan_on_push": true,
+    "block_vulnerable_images": true,
+    "severity_cutoff": "high"
+  },
+  "cleanup_policy": {
+    "keep_last": 10,
+    "expire_older_than": "30d"
+  },
+  "replication": {
+    "regions": ["us-east-1", "eu-central-1"]
+  }
+}

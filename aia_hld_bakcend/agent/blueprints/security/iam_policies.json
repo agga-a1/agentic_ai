@@ -1,0 +1,19 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowSharedServiceAccess",
+      "Effect": "Allow",
+      "Action": [
+        "s3:Get*",
+        "ecr:GetDownloadUrlForLayer"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "StringEquals": {
+          "aws:PrincipalOrgID": "o-exampleorgid"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "pattern_id": "DEPLOYMENT_STRATEGY_MATRIX",
+  "layer": "technical_blueprint",
+  "strategies": [
+    {
+      "name": "Recreate",
+      "suitability": "Development / Non-Prod",
+      "description": "Terminate old version before starting new version.",
+      "pros": ["Simple", "No double-costing"],
+      "cons": ["Service downtime"],
+      "gcp_service_match": ["GCE", "GKE", "Cloud Run"]
+    },
+    {
+      "name": "Rolling Update",
+      "suitability": "Standard Production",
+      "description": "Gradually replaces old instances with new ones.",
+      "pros": ["No downtime", "Standard GCP behavior"],
+      "cons": ["Both versions run simultaneously (Version skew)"],
+      "gcp_service_match": ["GKE", "MIGs", "Cloud Run"]
+    },
+    {
+      "name": "Blue/Green",
+      "suitability": "Mission Critical / Tier 1",
+      "description": "Two identical environments; switch traffic instantly via Load Balancer.",
+      "pros": ["Zero downtime", "Instant rollback"],
+      "cons": ["2x Cost during deployment"],
+      "gcp_service_match": ["GKE", "App Engine", "Cloud Run (via Tagging)"]
+    },
+    {
+      "name": "Canary",
+      "suitability": "High Traffic / Risk Sensitive",
+      "description": "Route a small % of traffic to the new version to test stability.",
+      "pros": ["Real-world testing", "Minimal blast radius"],
+      "cons": ["Complex monitoring / Traffic splitting required"],
+      "gcp_service_match": ["GKE (Istio/Anthos)", "Cloud Run", "Apigee"]
+    }
+  ],
+  "logic_triggers": {
+    "If_Tier_1": "Recommend Blue/Green or Canary.",
+    "If_Tier_3": "Default to Recreate to save costs.",
+    "Cost_Impact": "Blue/Green adds +100% compute cost during the release window."
+  }
+}
