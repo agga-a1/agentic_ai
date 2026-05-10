@@ -1,0 +1,22 @@
+{
+  "patterns": [
+    {
+      "id": "FLOW_REALTIME",
+      "name": "Real-time Streaming",
+      "trigger": "Cloud Pub/Sub",
+      "process": "Dataflow / Cloud Run",
+      "sink": "BigQuery / Bigtable",
+      "logic": "Low latency, event-by-event processing",
+      "mermaid_snippet": "graph LR\n  Source --> PubSub\n  PubSub --> Dataflow\n  Dataflow --> BigQuery"
+    },
+    {
+      "id": "FLOW_BATCH",
+      "name": "Historical Batch Load",
+      "trigger": "Cloud Scheduler / Manual",
+      "process": "Dataproc / Cloud Storage Transfer",
+      "sink": "BigQuery / GCS",
+      "logic": "Scheduled, large volume, non-interactive",
+      "mermaid_snippet": "graph LR\n  GCS_Bucket --> StorageTransfer\n  StorageTransfer --> BigQuery"
+    }
+  ]
+}

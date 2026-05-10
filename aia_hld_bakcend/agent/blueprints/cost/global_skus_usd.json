@@ -1,0 +1,25 @@
+{
+  "pattern_id": "GLOBAL_SKU_USD_2026",
+  "currency": "USD",
+  "last_updated": "2026-04-01",
+  "services": {
+    "compute": {
+      "Cloud_Run": {"unit": "vCPU-hour", "price": 0.080},
+      "Cloud_Functions_v2": {"unit": "1M_invocations", "price": 0.40},
+      "GCE_N2_Standard": {"unit": "vCPU-hour", "price": 0.0475},
+      "GKE_Autopilot": {"unit": "vCPU-hour", "price": 0.0445},
+      "Dataproc_Serverless": {"unit": "DCU-hour", "price": 0.60}
+    },
+    "data_and_storage": {
+      "BigQuery_Analysis": {"unit": "TB_scanned", "price": 6.25},
+      "BigQuery_Storage": {"unit": "GB-month", "price": 0.02},
+      "GCS_Standard": {"unit": "GB-month", "price": 0.02},
+      "PubSub_Throughput": {"unit": "GB", "price": 40.00},
+      "Cloud_SQL_vCPU": {"unit": "vCPU-hour", "price": 0.0413}
+    },
+    "orchestration": {
+      "Workflows": {"unit": "1k_steps", "price": 0.01},
+      "Cloud_Scheduler": {"unit": "job-month", "price": 0.10}
+    }
+  }
+}

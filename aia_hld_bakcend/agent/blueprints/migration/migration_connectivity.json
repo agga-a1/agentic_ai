@@ -1,0 +1,62 @@
+{
+  "pattern_id": "HYBRID_CLOUD_CONNECTIVITY_MASTER",
+  "version": "2026.1",
+  "layer": "technical_blueprint",
+  "connectivity_matrix": {
+    "on_prem_to_gcp": {
+      "direction": "Ingress / Migration",
+      "primary_tools": ["HA VPN", "Dedicated Interconnect", "Cloud Router"],
+      "vpc_sc_logic": {
+        "requirement": "Ingress Policy",
+        "action": "Allow",
+        "from": {
+          "sources": ["Access Level (IP Range)", "On-prem CIDR"],
+          "identities": ["Migration Service Account"]
+        },
+        "to": {
+          "resources": ["projects/*"],
+          "operations": ["storage.googleapis.com", "bigquery.googleapis.com"]
+        }
+      },
+      "common_use_cases": ["Initial Data Load", "Hybrid ETL", "Mainframe Modernization"]
+    },
+    "gcp_to_gcp": {
+      "direction": "Inter-Project / Inter-Org",
+      "primary_tools": ["VPC Network Peering", "Private Service Connect (PSC)", "Cloud DNS Peering"],
+      "vpc_sc_logic": {
+        "requirement": "Perimeter Bridge",
+        "logic": "Connects two disparate service perimeters to allow cross-boundary API calls without exposing the full network.",
+        "security_gate": "Service Account must be explicitly whitelisted in both perimeters."
+      },
+      "common_use_cases": ["Centralized Logging", "Shared VPC Host-to-Service Project", "Hub-and-Spoke Analytics"]
+    },
+    "gcp_to_on_prem": {
+      "direction": "Egress / Reverse ETL",
+      "primary_tools": ["Cloud NAT", "Partner Interconnect", "Egress Proxy"],
+      "vpc_sc_logic": {
+        "requirement": "Egress Policy",
+        "action": "Allow",
+        "from": {
+          "identities": ["Data-Export-Bot@iam.gserviceaccount.com"]
+        },
+        "to": {
+          "external_destinations": ["On-prem API Gateway", "Fixed IP Endpoints"],
+          "operations": ["All Services"]
+        }
+      },
+      "common_use_cases": ["Sending insights to on-prem ERP", "Legacy system updates", "Regulatory reporting"]
+    }
+  },
+  "risk_mitigation_reference": [
+    {
+      "scenario": "IP Overlap",
+      "impact": "Routing failure between On-prem and GCP or between VPCs.",
+      "mitigation": "Use Private Service Connect (PSC) to abstract services behind local IPs."
+    },
+    {
+      "scenario": "VPC-SC Blockage",
+      "impact": "Valid IAM requests fail with 403 Forbidden due to perimeter boundary.",
+      "mitigation": "Implement Perimeter Bridges for GCP-to-GCP or Ingress/Egress policies for Hybrid flows."
+    }
+  ]
+}

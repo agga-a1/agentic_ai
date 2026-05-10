@@ -1,0 +1,60 @@
+{
+  "pattern_id": "NFR_STANDARD_TECHNICAL",
+  "layer": "standard",
+  "usage_instruction": "Use this to determine technical scaling, availability strategy, and cost impact based on the selected Application Tier.",
+  "nfr_categories": [
+    {
+      "category": "Availability & Reliability",
+      "application_tiers": {
+        "Tier_1_Mission_Critical": {
+          "slo_target": "99.99%",
+          "strategy": "Multi-Region / Active-Active",
+          "cost_multiplier": 2.5,
+          "recovery_targets": {
+            "rpo": "< 5 minutes",
+            "rto": "< 1 hour"
+          },
+          "infra_impact": "Requires Global Load Balancing and cross-region data replication (e.g., Spanner or Multi-Region GCS)."
+        },
+        "Tier_2_Production": {
+          "slo_target": "99.9%",
+          "strategy": "Single-Region / Multi-Zone (HA)",
+          "cost_multiplier": 1.0,
+          "recovery_targets": {
+            "rpo": "< 1 hour",
+            "rto": "< 4 hours"
+          },
+          "infra_impact": "Requires deployment across at least 3 zones within a single region."
+        },
+        "Tier_3_Dev_Test": {
+          "slo_target": "99.0%",
+          "strategy": "Single-Zone / Ephemeral",
+          "cost_multiplier": 0.5,
+          "recovery_targets": {
+            "rpo": "Best effort",
+            "rto": "Next business day"
+          },
+          "infra_impact": "Basic deployment, no redundancy required. Scaling to zero where possible."
+        }
+      }
+    },
+    {
+      "category": "Security & Identity",
+      "mandatory_rules": [
+        "All data must be encrypted at rest and in transit.",
+        "Principle of Least Privilege (PoLP) for IAM roles.",
+        "VPC Service Controls for data exfiltration prevention."
+      ],
+      "cost_impact": "Add $1.00/month per KMS key for CMEK.",
+      "infra_impact": "Requires VPC Service Control Perimeter in Terraform configurations."
+    },
+    {
+      "category": "Performance & Scalability",
+      "metrics": {
+        "api_latency": "< 200ms at p95",
+        "autoscaling_threshold": "70% CPU/Memory utilization",
+        "logic": "Apply Horizontal Pod Autoscaler (HPA) for GKE or Managed Instance Group (MIG) autoscaling for GCE."
+      }
+    }
+  ]
+}

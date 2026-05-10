@@ -1,0 +1,29 @@
+{
+  "pattern_id": "INGEST_BATCH_PATTERNS",
+  "layer": "technical_blueprint",
+  "patterns": [
+    {
+      "name": "Bulk Historical Load",
+      "trigger": "Manual / One-time",
+      "flow": "On-prem/External S3 -> Storage Transfer Service (STS) -> GCS -> BigQuery Load",
+      "use_case": "Data warehouse migration, initial system sync",
+      "volume_handling": "Petabyte scale",
+      "cost_logic": "Lowest cost per GB, utilizes GCS Nearline/Coldline."
+    },
+    {
+      "name": "Scheduled Micro-batch",
+      "trigger": "Time-based (CRON)",
+      "flow": "Cloud Scheduler -> Cloud Functions/Workflows -> API/DB -> GCS",
+      "use_case": "Nightly sales reports, daily inventory sync",
+      "tools": ["Cloud Scheduler", "Cloud Workflows", "BigQuery DTS"],
+      "impact": "Requires consideration for resource contention during peak hours."
+    },
+    {
+      "name": "ETL/ELT Pipeline",
+      "trigger": "Orchestrated",
+      "flow": "Cloud Composer (Airflow)/Workflow -> Dataproc/Dataflow -> BigQuery",
+      "use_case": "Complex transformations, cross-database joins, data quality checks",
+      "strategy": "Load raw to GCS, transform in BigQuery (ELT) or Dataflow (ETL)."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "perimeter_name": "production-secure-zone",
+  "ingress_rules": [
+    {
+      "description": "Allow HTTPS from Corporate VPN",
+      "protocol": "tcp",
+      "port": 443,
+      "source": "10.0.0.0/8"
+    }
+  ],
+  "egress_rules": [
+    {
+      "description": "Restrict to Internal Services",
+      "destination": "172.16.0.0/12",
+      "action": "allow"
+    }
+  ],
+  "log_config": "enabled"
+}
