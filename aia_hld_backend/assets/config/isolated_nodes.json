@@ -1,0 +1,18 @@
+{
+  "isolated_node_terms": [
+    "logging",
+    "monitoring",
+    "observability",
+    "logs",
+    "metrics",
+    "alerts",
+    "cloud build",
+    "terraform",
+    "ci/cd",
+    "ci cd",
+    "cicd",
+    "deployment",
+    "iac",
+    "orchestration"
+  ]
+}

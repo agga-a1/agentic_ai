@@ -1,0 +1,40 @@
+# Ignore Python cache and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+aia_hld/
+aia_hld_backup/
+# Ignore virtual environments
+venv/
+.env/
+*.env
+
+# Ignore version control directories
+.git/
+.gitignore
+
+# Ignore documentation and metadata
+README*
+LICENSE
+*.md
+*.rst
+
+# Ignore test files
+tests/
+*.test.py
+
+# Ignore local development files
+*.log
+*.swp
+*.bak
+.DS_Store
+.idea/
+.vscode/
+
+# Ignore Docker-related files not needed in image
+.dockerignore
+docker-compose.yml
+
+# database for sessions 
+sessions.db

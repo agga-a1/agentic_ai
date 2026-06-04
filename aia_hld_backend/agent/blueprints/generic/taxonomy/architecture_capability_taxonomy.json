@@ -1,0 +1,120 @@
+{
+  "schema_version": "2026.05.11-consolidated-v1",
+  "blueprint_id": "ARCHITECTURE_CAPABILITY_TAXONOMY",
+  "domain": "taxonomy",
+  "cloud": "generic",
+  "priority": "retrieval_foundation",
+  "capabilities": {
+    "compute": [
+      "virtual_machines",
+      "containers",
+      "serverless",
+      "functions",
+      "batch",
+      "hpc",
+      "gpu_tpu",
+      "managed_platform"
+    ],
+    "storage": [
+      "object_storage",
+      "block_storage",
+      "file_storage",
+      "archive",
+      "backup",
+      "data_lake"
+    ],
+    "database": [
+      "relational",
+      "nosql",
+      "wide_column",
+      "graph",
+      "cache",
+      "time_series",
+      "ledger",
+      "vector_database"
+    ],
+    "data": [
+      "batch_ingestion",
+      "streaming_ingestion",
+      "etl",
+      "elt",
+      "orchestration",
+      "warehouse",
+      "lakehouse",
+      "governance",
+      "bi",
+      "catalog",
+      "lineage"
+    ],
+    "ai": [
+      "foundation_models",
+      "rag",
+      "vector_search",
+      "agentic_ai",
+      "ml_training",
+      "model_serving",
+      "document_ai",
+      "vision",
+      "speech",
+      "translation",
+      "responsible_ai",
+      "mlops"
+    ],
+    "networking": [
+      "vpc_vnet",
+      "subnets",
+      "dns",
+      "load_balancing",
+      "cdn",
+      "nat",
+      "firewall",
+      "private_endpoint",
+      "hybrid_connectivity",
+      "multi_cloud_connectivity",
+      "service_perimeter"
+    ],
+    "security": [
+      "iam",
+      "rbac",
+      "kms",
+      "secrets",
+      "waf",
+      "ddos",
+      "posture_management",
+      "audit",
+      "dlp",
+      "zero_trust",
+      "policy_as_code"
+    ],
+    "devops": [
+      "source_control",
+      "ci",
+      "cd",
+      "artifact_management",
+      "iac",
+      "branch_protection",
+      "image_scanning",
+      "release_strategy"
+    ],
+    "observability": [
+      "logging",
+      "metrics",
+      "tracing",
+      "alerting",
+      "dashboards",
+      "slo",
+      "audit_logs",
+      "ai_observability"
+    ],
+    "operations": [
+      "backup_restore",
+      "dr",
+      "incident_management",
+      "change_management",
+      "patching",
+      "runbooks",
+      "cost_management"
+    ]
+  },
+  "retrieval_text": "architecture capability taxonomy compute storage database data AI RAG agentic networking security devops observability operations"
+}

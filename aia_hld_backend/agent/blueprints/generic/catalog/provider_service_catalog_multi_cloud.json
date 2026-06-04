@@ -1,0 +1,369 @@
+{
+  "schema_version": "2026.05.11-consolidated-v1",
+  "blueprint_id": "PROVIDER_SERVICE_CATALOG_MULTI_CLOUD",
+  "domain": "provider_catalog",
+  "cloud": "multi_cloud",
+  "priority": "generic_fallback_catalog",
+  "retrieval_text": "GCP AWS Azure service catalog compute storage databases analytics AI ML GenAI RAG networking security DevOps observability integration hybrid multi cloud",
+  "providers": {
+    "gcp": {
+      "compute": [
+        "Compute Engine",
+        "Managed Instance Groups",
+        "Cloud Run",
+        "Cloud Run functions",
+        "Google Kubernetes Engine",
+        "App Engine",
+        "Batch",
+        "Cloud Workstations",
+        "Cloud TPU",
+        "AI Hypercomputer"
+      ],
+      "containers": [
+        "GKE Standard",
+        "GKE Autopilot",
+        "Artifact Registry",
+        "Cloud Deploy",
+        "Binary Authorization"
+      ],
+      "storage": [
+        "Cloud Storage",
+        "Persistent Disk",
+        "Filestore",
+        "Backup and DR Service",
+        "Transfer Appliance"
+      ],
+      "databases": [
+        "Cloud SQL",
+        "AlloyDB for PostgreSQL",
+        "Spanner",
+        "Firestore",
+        "Bigtable",
+        "Memorystore",
+        "Database Migration Service"
+      ],
+      "data_analytics": [
+        "BigQuery",
+        "Dataflow",
+        "Dataproc",
+        "Pub/Sub",
+        "Cloud Composer",
+        "Cloud Data Fusion",
+        "Dataform",
+        "Dataplex",
+        "Looker",
+        "Datastream"
+      ],
+      "ai_ml_genai": [
+        "Gemini Enterprise Agent Platform",
+        "Gemini Enterprise app",
+        "Vertex AI",
+        "Model Garden",
+        "Vertex AI RAG Engine",
+        "Vertex AI Vector Search",
+        "Vertex AI Search",
+        "Document AI",
+        "Vision AI",
+        "Speech-to-Text",
+        "Text-to-Speech",
+        "Translation AI",
+        "Natural Language AI",
+        "BigQuery ML",
+        "Colab Enterprise"
+      ],
+      "networking": [
+        "VPC",
+        "Shared VPC",
+        "Cloud Load Balancing",
+        "Cloud CDN",
+        "Cloud DNS",
+        "Cloud NAT",
+        "Cloud Router",
+        "Cloud VPN",
+        "Dedicated Interconnect",
+        "Partner Interconnect",
+        "Private Service Connect",
+        "VPC Network Peering",
+        "Network Connectivity Center",
+        "Cloud Armor"
+      ],
+      "security": [
+        "IAM",
+        "Cloud Identity",
+        "Organization Policy",
+        "VPC Service Controls",
+        "Cloud KMS",
+        "Secret Manager",
+        "Security Command Center",
+        "Cloud Armor",
+        "Certificate Manager",
+        "Access Context Manager",
+        "Cloud DLP",
+        "Cloud IDS"
+      ],
+      "devops": [
+        "Cloud Build",
+        "Cloud Deploy",
+        "Artifact Registry",
+        "Secure Source Manager",
+        "Infrastructure Manager",
+        "Config Connector",
+        "Cloud Code"
+      ],
+      "observability": [
+        "Cloud Logging",
+        "Cloud Monitoring",
+        "Cloud Trace",
+        "Cloud Profiler",
+        "Error Reporting",
+        "Cloud Audit Logs",
+        "Managed Service for Prometheus"
+      ],
+      "integration": [
+        "Apigee",
+        "API Gateway",
+        "Application Integration",
+        "Integration Connectors",
+        "Workflows",
+        "Cloud Scheduler",
+        "Eventarc",
+        "Cloud Tasks",
+        "Pub/Sub"
+      ]
+    },
+    "aws": {
+      "compute": [
+        "Amazon EC2",
+        "EC2 Auto Scaling",
+        "AWS Lambda",
+        "AWS Elastic Beanstalk",
+        "AWS Batch",
+        "Amazon Lightsail",
+        "VMware Cloud on AWS"
+      ],
+      "containers": [
+        "Amazon ECS",
+        "Amazon EKS",
+        "AWS Fargate",
+        "Amazon ECR",
+        "AWS App Runner"
+      ],
+      "storage": [
+        "Amazon S3",
+        "Amazon EBS",
+        "Amazon EFS",
+        "Amazon FSx",
+        "S3 Glacier",
+        "AWS Backup",
+        "AWS Storage Gateway"
+      ],
+      "databases": [
+        "Amazon RDS",
+        "Amazon Aurora",
+        "Amazon DynamoDB",
+        "Amazon Redshift",
+        "Amazon ElastiCache",
+        "Amazon Neptune",
+        "Amazon DocumentDB",
+        "Amazon Timestream",
+        "Amazon QLDB",
+        "Amazon OpenSearch Service"
+      ],
+      "data_analytics": [
+        "Amazon Athena",
+        "Amazon EMR",
+        "Amazon Redshift",
+        "Amazon QuickSight",
+        "Amazon Kinesis",
+        "AWS Glue",
+        "AWS Lake Formation",
+        "Amazon MSK",
+        "AWS Clean Rooms"
+      ],
+      "ai_ml_genai": [
+        "Amazon Bedrock",
+        "Amazon SageMaker",
+        "Amazon Q",
+        "Amazon Lex",
+        "Amazon Polly",
+        "Amazon Transcribe",
+        "Amazon Translate",
+        "Amazon Comprehend",
+        "Amazon Rekognition",
+        "Amazon Textract",
+        "Amazon Kendra",
+        "Knowledge Bases for Amazon Bedrock"
+      ],
+      "networking": [
+        "Amazon VPC",
+        "Elastic Load Balancing",
+        "Amazon CloudFront",
+        "Amazon Route 53",
+        "AWS Direct Connect",
+        "AWS Transit Gateway",
+        "AWS PrivateLink",
+        "AWS VPN",
+        "AWS Global Accelerator",
+        "AWS Network Firewall",
+        "AWS WAF"
+      ],
+      "security": [
+        "AWS IAM",
+        "AWS Organizations",
+        "AWS KMS",
+        "AWS Secrets Manager",
+        "AWS Certificate Manager",
+        "Amazon GuardDuty",
+        "AWS Security Hub",
+        "Amazon Inspector",
+        "AWS Shield",
+        "AWS WAF",
+        "AWS CloudTrail",
+        "Amazon Macie"
+      ],
+      "devops": [
+        "AWS CodeCommit",
+        "AWS CodeBuild",
+        "AWS CodeDeploy",
+        "AWS CodePipeline",
+        "AWS CloudFormation",
+        "AWS CDK",
+        "Amazon ECR",
+        "AWS Systems Manager"
+      ],
+      "observability": [
+        "Amazon CloudWatch",
+        "AWS X-Ray",
+        "AWS CloudTrail",
+        "Amazon Managed Service for Prometheus",
+        "Amazon Managed Grafana",
+        "AWS Distro for OpenTelemetry"
+      ],
+      "integration": [
+        "Amazon API Gateway",
+        "Amazon SNS",
+        "Amazon SQS",
+        "Amazon EventBridge",
+        "AWS Step Functions",
+        "Amazon AppFlow",
+        "AWS AppSync",
+        "AWS Transfer Family"
+      ]
+    },
+    "azure": {
+      "compute": [
+        "Azure Virtual Machines",
+        "Virtual Machine Scale Sets",
+        "Azure App Service",
+        "Azure Functions",
+        "Azure Batch",
+        "Azure Container Apps",
+        "Azure VMware Solution"
+      ],
+      "containers": [
+        "Azure Kubernetes Service",
+        "Azure Container Instances",
+        "Azure Container Registry",
+        "Azure Red Hat OpenShift"
+      ],
+      "storage": [
+        "Azure Blob Storage",
+        "Azure Files",
+        "Azure Disk Storage",
+        "Azure NetApp Files",
+        "Azure Data Lake Storage",
+        "Azure Backup"
+      ],
+      "databases": [
+        "Azure SQL Database",
+        "Azure SQL Managed Instance",
+        "Azure Database for PostgreSQL",
+        "Azure Database for MySQL",
+        "Azure Cosmos DB",
+        "Azure Cache for Redis",
+        "Azure Managed Redis"
+      ],
+      "data_analytics": [
+        "Microsoft Fabric",
+        "Azure Synapse Analytics",
+        "Azure Databricks",
+        "Azure Data Factory",
+        "Azure Stream Analytics",
+        "Azure Event Hubs",
+        "Azure Data Explorer",
+        "Power BI Embedded",
+        "Microsoft Purview"
+      ],
+      "ai_ml_genai": [
+        "Microsoft Foundry",
+        "Azure OpenAI in Foundry Models",
+        "Azure AI Search",
+        "Azure Machine Learning",
+        "Azure AI Bot Service",
+        "Azure Document Intelligence",
+        "Azure Speech",
+        "Azure Language",
+        "Azure Translator",
+        "Azure AI Vision",
+        "Content Safety",
+        "Phi open models",
+        "Microsoft Security Copilot"
+      ],
+      "networking": [
+        "Azure Virtual Network",
+        "Azure Load Balancer",
+        "Application Gateway",
+        "Azure Front Door",
+        "Azure CDN",
+        "Azure DNS",
+        "Azure Private Link",
+        "VPN Gateway",
+        "ExpressRoute",
+        "Virtual WAN",
+        "NAT Gateway",
+        "Azure Firewall",
+        "DDoS Protection",
+        "Traffic Manager"
+      ],
+      "security": [
+        "Microsoft Entra ID",
+        "Azure Key Vault",
+        "Microsoft Defender for Cloud",
+        "Microsoft Sentinel",
+        "Azure Policy",
+        "Azure Firewall",
+        "Web Application Firewall",
+        "Azure DDoS Protection",
+        "Managed HSM",
+        "Microsoft Purview"
+      ],
+      "devops": [
+        "Azure DevOps",
+        "GitHub Actions",
+        "Azure Container Registry",
+        "Azure Deployment Environments",
+        "Bicep",
+        "ARM Templates",
+        "Terraform on Azure"
+      ],
+      "observability": [
+        "Azure Monitor",
+        "Log Analytics",
+        "Application Insights",
+        "Network Watcher",
+        "Managed Grafana",
+        "Azure Monitor managed service for Prometheus"
+      ],
+      "integration": [
+        "Azure API Management",
+        "Logic Apps",
+        "Service Bus",
+        "Event Grid",
+        "Event Hubs",
+        "Azure Functions",
+        "Data Factory",
+        "Integration Account"
+      ]
+    }
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "schema_version": "2026.05.11-consolidated-v1",
+  "blueprint_id": "SRC_INGESTION_BATCH",
+  "source_file": "ingestion_batch.json",
+  "domain": "data_ingestion",
+  "cloud": "gcp",
+  "blueprint_type": "technical_blueprint",
+  "priority": "source_standard",
+  "services": [
+    "Storage Transfer Service",
+    "GCS",
+    "BigQuery",
+    "Cloud Scheduler",
+    "Cloud Functions",
+    "Workflows",
+    "BigQuery DTS",
+    "Cloud Composer",
+    "Dataproc",
+    "Dataflow"
+  ],
+  "capabilities": [
+    "batch_ingestion",
+    "bulk_load",
+    "micro_batch",
+    "etl_elt"
+  ],
+  "keywords": [
+    "BigQuery",
+    "BigQuery DTS",
+    "Cloud Composer",
+    "Cloud Functions",
+    "Cloud Scheduler",
+    "Dataflow",
+    "Dataproc",
+    "GCS",
+    "Storage Transfer Service",
+    "Workflows",
+    "batch",
+    "batch ingestion",
+    "batch_ingestion",
+    "bulk historical",
+    "bulk_load",
+    "composer",
+    "elt",
+    "etl",
+    "etl_elt",
+    "micro_batch",
+    "scheduled"
+  ],
+  "aliases": [
+    "batch ingestion"
+  ],
+  "hld_usage": {
+    "use_when": "Use this source standard when relevant to matching services, capabilities, NFR, security, cost, deployment or operations requirements.",
+    "blank_prevention": "If exact values are missing, use this as governing standard and combine with generic fallback patterns."
+  },
+  "retrieval_text": "ingestion_batch.json | data_ingestion | gcp | technical_blueprint | Storage Transfer Service | GCS | BigQuery | Cloud Scheduler | Cloud Functions | Workflows | BigQuery DTS | Cloud Composer | Dataproc | Dataflow | batch_ingestion | bulk_load | micro_batch | etl_elt | batch | bulk historical | scheduled | etl | elt | composer | batch ingestion | {\"pattern_id\": \"INGEST_BATCH_PATTERNS\", \"layer\": \"technical_blueprint\", \"patterns\": [{\"name\": \"Bulk Historical Load\", \"trigger\": \"Manual / One-time\", \"flow\": \"On-prem/External S3 -> Storage Transfer Service (STS) -> GCS -> BigQuery Load\", \"use_case\": \"Data warehouse migration, initial system sync\", \"volume_handling\": \"Petabyte scale\", \"cost_logic\": \"Lowest cost per GB, utilizes GCS Nearline/Coldline.\"}, {\"name\": \"Scheduled Micro-batch\", \"trigger\": \"Time-based (CRON)\", \"flow\": \"Cloud Scheduler -> Cloud Functions/Workflows -> API/DB -> GCS\", \"use_case\": \"Nightly sales reports, daily inventory sync\", \"tools\": [\"Cloud Scheduler\", \"Cloud Workflows\", \"BigQuery DTS\"], \"impact\": \"Requires consideration for resource contention during peak hours.\"}, {\"name\": \"ETL/ELT Pipeline\", \"trigger\": \"Orchestrated\", \"flow\": \"Cloud Composer (Airflow)/Workflow -> Dataproc/Dataflow -> BigQuery\", \"use_case\": \"Complex transformations, cross-database joins, data quality checks\", \"strategy\": \"Load raw to GCS, transform in BigQuery (ELT) or Dataflow (ETL).\"}]}",
+  "source_payload": {
+    "pattern_id": "INGEST_BATCH_PATTERNS",
+    "layer": "technical_blueprint",
+    "patterns": [
+      {
+        "name": "Bulk Historical Load",
+        "trigger": "Manual / One-time",
+        "flow": "On-prem/External S3 -> Storage Transfer Service (STS) -> GCS -> BigQuery Load",
+        "use_case": "Data warehouse migration, initial system sync",
+        "volume_handling": "Petabyte scale",
+        "cost_logic": "Lowest cost per GB, utilizes GCS Nearline/Coldline."
+      },
+      {
+        "name": "Scheduled Micro-batch",
+        "trigger": "Time-based (CRON)",
+        "flow": "Cloud Scheduler -> Cloud Functions/Workflows -> API/DB -> GCS",
+        "use_case": "Nightly sales reports, daily inventory sync",
+        "tools": [
+          "Cloud Scheduler",
+          "Cloud Workflows",
+          "BigQuery DTS"
+        ],
+        "impact": "Requires consideration for resource contention during peak hours."
+      },
+      {
+        "name": "ETL/ELT Pipeline",
+        "trigger": "Orchestrated",
+        "flow": "Cloud Composer (Airflow)/Workflow -> Dataproc/Dataflow -> BigQuery",
+        "use_case": "Complex transformations, cross-database joins, data quality checks",
+        "strategy": "Load raw to GCS, transform in BigQuery (ELT) or Dataflow (ETL)."
+      }
+    ]
+  }
+}

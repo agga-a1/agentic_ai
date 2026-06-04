@@ -1,0 +1,133 @@
+{
+  "schema_version": "2026.05.11-consolidated-v1",
+  "blueprint_id": "CONNECTIVITY_PATTERNS_FULL",
+  "domain": "connectivity",
+  "cloud": "multi_cloud",
+  "priority": "generic_and_provider_connectivity",
+  "patterns": [
+    {
+      "pattern_id": "CONN_ONPREM_GCP",
+      "name": "On-prem to GCP",
+      "flow": "On-prem DC -> Firewall -> HA VPN/Dedicated Interconnect -> Cloud Router -> GCP VPC/Shared VPC -> Private services",
+      "services": [
+        "HA VPN",
+        "Dedicated Interconnect",
+        "Cloud Router",
+        "Private Service Connect",
+        "Cloud DNS",
+        "VPC Service Controls"
+      ],
+      "controls": [
+        "CIDR non-overlap",
+        "BGP route control",
+        "firewall allowlist",
+        "private DNS",
+        "VPC-SC ingress/egress where data services are protected"
+      ]
+    },
+    {
+      "pattern_id": "CONN_GCP_AWS",
+      "name": "GCP to AWS Private Connectivity",
+      "flow": "GCP VPC -> Cloud VPN/Interconnect -> Carrier/SD-WAN -> AWS Direct Connect/Site-to-Site VPN -> Transit Gateway/VPC",
+      "services": [
+        "Cloud VPN",
+        "Cloud Interconnect",
+        "Cloud Router",
+        "AWS Direct Connect",
+        "AWS Site-to-Site VPN",
+        "AWS Transit Gateway",
+        "Route 53 Resolver"
+      ],
+      "controls": [
+        "BGP",
+        "route table governance",
+        "CIDR non-overlap",
+        "DNS forwarding",
+        "central firewall inspection",
+        "encryption"
+      ]
+    },
+    {
+      "pattern_id": "CONN_GCP_AZURE",
+      "name": "GCP to Azure Private Connectivity",
+      "flow": "GCP VPC -> Cloud VPN/Interconnect -> Carrier/SD-WAN -> Azure ExpressRoute/VPN Gateway -> Azure VNet",
+      "services": [
+        "Cloud VPN",
+        "Cloud Interconnect",
+        "Cloud Router",
+        "ExpressRoute",
+        "VPN Gateway",
+        "Virtual WAN",
+        "Azure Private Link"
+      ],
+      "controls": [
+        "BGP",
+        "private DNS",
+        "NSG/firewall alignment",
+        "CIDR planning",
+        "egress control"
+      ]
+    },
+    {
+      "pattern_id": "CONN_AWS_AZURE",
+      "name": "AWS to Azure Private Connectivity",
+      "flow": "AWS VPC -> Direct Connect/VPN -> Carrier/SD-WAN -> ExpressRoute/VPN Gateway -> Azure VNet",
+      "services": [
+        "AWS Direct Connect",
+        "AWS Transit Gateway",
+        "AWS Site-to-Site VPN",
+        "ExpressRoute",
+        "Virtual WAN",
+        "VPN Gateway"
+      ],
+      "controls": [
+        "routing domains",
+        "segmentation",
+        "shared services hub",
+        "central inspection"
+      ]
+    },
+    {
+      "pattern_id": "CONN_SAAS_API",
+      "name": "Secure SaaS/API Integration",
+      "flow": "Cloud workload -> NAT/Egress firewall -> API Gateway/WAF -> SaaS/API endpoint",
+      "services": [
+        "API Gateway",
+        "Apigee",
+        "Amazon API Gateway",
+        "Azure API Management",
+        "Cloud NAT",
+        "NAT Gateway"
+      ],
+      "controls": [
+        "OAuth/mTLS",
+        "fixed egress IP",
+        "rate limit",
+        "secret rotation",
+        "audit logs"
+      ]
+    },
+    {
+      "pattern_id": "CONN_CROSS_CLOUD_DATA",
+      "name": "Cross Cloud Data Transfer",
+      "flow": "Source storage/database -> Transfer/ETL -> Secure network/API -> Target storage/warehouse",
+      "services": [
+        "Storage Transfer Service",
+        "AWS DataSync/Transfer Family",
+        "Azure Data Factory",
+        "Dataflow",
+        "Glue",
+        "Databricks"
+      ],
+      "controls": [
+        "checksums",
+        "reconciliation",
+        "encryption",
+        "DLP",
+        "retention",
+        "data residency"
+      ]
+    }
+  ],
+  "retrieval_text": "on-prem onprem GCP AWS Azure private connectivity VPN Interconnect Direct Connect ExpressRoute PSC PrivateLink Private Link cloud to cloud data transfer SaaS API"
+}

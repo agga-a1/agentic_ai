@@ -1,0 +1,166 @@
+{
+  "schema_version": "2026.05.11-consolidated-v1",
+  "blueprint_id": "SRC_COMPUTE_STORAGE_RULES",
+  "source_file": "compute_storage_rules.json",
+  "domain": "service_selection",
+  "cloud": "gcp",
+  "blueprint_type": "technical_blueprint",
+  "priority": "source_standard",
+  "services": [
+    "Cloud Functions",
+    "Cloud Run",
+    "GKE",
+    "Cloud Storage",
+    "Cloud SQL",
+    "Spanner",
+    "Firestore",
+    "Bigtable",
+    "BigQuery",
+    "Dataproc",
+    "Looker",
+    "Dataflow",
+    "Cloud Composer",
+    "Cloud Data Fusion",
+    "dbt"
+  ],
+  "capabilities": [
+    "compute_selection",
+    "storage_selection",
+    "analytics_selection",
+    "orchestration_selection"
+  ],
+  "keywords": [
+    "BigQuery",
+    "Bigtable",
+    "Cloud Composer",
+    "Cloud Data Fusion",
+    "Cloud Functions",
+    "Cloud Run",
+    "Cloud SQL",
+    "Cloud Storage",
+    "Dataflow",
+    "Dataproc",
+    "Firestore",
+    "GKE",
+    "Looker",
+    "Spanner",
+    "analytics",
+    "analytics_selection",
+    "compute",
+    "compute_selection",
+    "data orchestration",
+    "database",
+    "dbt",
+    "orchestration_selection",
+    "service selector",
+    "storage",
+    "storage_selection",
+    "technology stack"
+  ],
+  "aliases": [
+    "technology stack"
+  ],
+  "hld_usage": {
+    "use_when": "Use this source standard when relevant to matching services, capabilities, NFR, security, cost, deployment or operations requirements.",
+    "blank_prevention": "If exact values are missing, use this as governing standard and combine with generic fallback patterns."
+  },
+  "retrieval_text": "compute_storage_rules.json | service_selection | gcp | technical_blueprint | Cloud Functions | Cloud Run | GKE | Cloud Storage | Cloud SQL | Spanner | Firestore | Bigtable | BigQuery | Dataproc | Looker | Dataflow | Cloud Composer | Cloud Data Fusion | dbt | compute_selection | storage_selection | analytics_selection | orchestration_selection | compute | storage | database | analytics | data orchestration | service selector | technology stack | {\"pattern_id\": \"COMPUTE_STORAGE_SELECTOR\", \"decision_logic\": {\"compute\": [{\"service\": \"Cloud Functions\", \"use_case\": \"Small, event-driven, single-purpose code\", \"deployment\": \"Serverless\", \"icon\": \"./assets/icons/gcp/cloud_functions.png\"}, {\"service\": \"Cloud Run\", \"use_case\": \"Containerized web apps, microservices, scaling to zero\", \"deployment\": \"Serverless / Containerized\", \"icon\": \"./assets/icons/gcp/cloud_run.png\"}, {\"service\": \"GKE\", \"use_case\": \"Complex orchestration, multi-container apps, dedicated resources\", \"deployment\": \"Containerized\", \"icon\": \"./assets/icons/gcp/gke.png\"}], \"storage_db\": [{\"service\": \"Cloud Storage (GCS)\", \"type\": \"Object Storage\", \"usage\": \"Raw data, binary files, backup\", \"icon\": \"./assets/icons/gcp/gcs.png\"}, {\"service\": \"Cloud SQL / Spanner\", \"type\": \"Relational (SQL)\", \"usage\": \"Transactional data, ACID compliance\", \"icon\": \"./assets/icons/gcp/cloud_sql.png\"}, {\"service\": \"Firestore / Bigtable\", \"type\": \"NoSQL\", \"usage\": \"High throughput, real-time sync, schema-less\", \"icon\": \"./assets/icons/gcp/firestore.png\"}], \"analytics_dwh\": [{\"service\": \"BigQuery\", \"type\": \"Data Warehouse / Serverless Analytics\", \"usage\": \"Large scale analytical queries, BI, machine learning, petabyte-scale storage\", \"deployment\": \"Serverless\", \"icon\": \"./assets/icons/gcp/bigquery.png\"}, {\"service\": \"Dataproc\", \"type\": \"Managed Spark & Hadoop\", \"usage\": \"Big data processing, historical data migration, batch ETL jobs\", \"deployment\": \"Managed Clusters / Serverless\", \"icon\": \"./assets/icons/gcp/dataproc.png\"}, {\"service\": \"Looker / Looker Studio\", \"type\": \"Business Intelligence (BI)\", \"usage\": \"Data visualization, dashboards, self-service analytics\", \"deployment\": \"SaaS\", \"icon\": \"./assets/icons/gcp/looker.png\"}], \"data_orchestration_transformation\": [{\"service\": \"Dataflow\", \"type\": \"Unified Stream & Batch Processing\", \"usage\": \"Real-time ETL, complex stream processing using Apache Beam, high-scale data movement\", \"deployment\": \"Serverless\", \"icon\": \"./assets/icons/gcp/dataflow.png\"}, {\"service\": \"Cloud Composer\", \"type\": \"Workflow Orchestration (Managed Airflow)\", \"usage\": \"Complex pipeline scheduling, dependency management across multiple GCP services, hybrid/multi-cloud workflows\", \"deployment\": \"Managed Kubernetes (GKE)\", \"icon\": \"./assets/icons/gcp/composer.png\"}, {\"service\": \"Cloud Data Fusion\", \"type\": \"Visual Data Integration\", \"usage\": \"No-code/low-code ETL pipelines, data source connectors, enterprise data integration\", \"deployment\": \"Managed Service\", \"icon\": \"./assets/icons/gcp/data_fusion.png\"}, {\"service\": \"dbt (Data Build Tool)\", \"type\": \"Data Transformation\", \"usage\": \"SQL-based transformations within BigQuery, modular data modeling, version-controlled analytics engineering\", \"deployment\": \"Cloud / Self-hosted\", \"icon\": \"./assets/icons/gcp/dbt.png\"}]}}",
+  "source_payload": {
+    "pattern_id": "COMPUTE_STORAGE_SELECTOR",
+    "decision_logic": {
+      "compute": [
+        {
+          "service": "Cloud Functions",
+          "use_case": "Small, event-driven, single-purpose code",
+          "deployment": "Serverless",
+          "icon": "./assets/icons/gcp/cloud_functions.png"
+        },
+        {
+          "service": "Cloud Run",
+          "use_case": "Containerized web apps, microservices, scaling to zero",
+          "deployment": "Serverless / Containerized",
+          "icon": "./assets/icons/gcp/cloud_run.png"
+        },
+        {
+          "service": "GKE",
+          "use_case": "Complex orchestration, multi-container apps, dedicated resources",
+          "deployment": "Containerized",
+          "icon": "./assets/icons/gcp/gke.png"
+        }
+      ],
+      "storage_db": [
+        {
+          "service": "Cloud Storage (GCS)",
+          "type": "Object Storage",
+          "usage": "Raw data, binary files, backup",
+          "icon": "./assets/icons/gcp/gcs.png"
+        },
+        {
+          "service": "Cloud SQL / Spanner",
+          "type": "Relational (SQL)",
+          "usage": "Transactional data, ACID compliance",
+          "icon": "./assets/icons/gcp/cloud_sql.png"
+        },
+        {
+          "service": "Firestore / Bigtable",
+          "type": "NoSQL",
+          "usage": "High throughput, real-time sync, schema-less",
+          "icon": "./assets/icons/gcp/firestore.png"
+        }
+      ],
+      "analytics_dwh": [
+        {
+          "service": "BigQuery",
+          "type": "Data Warehouse / Serverless Analytics",
+          "usage": "Large scale analytical queries, BI, machine learning, petabyte-scale storage",
+          "deployment": "Serverless",
+          "icon": "./assets/icons/gcp/bigquery.png"
+        },
+        {
+          "service": "Dataproc",
+          "type": "Managed Spark & Hadoop",
+          "usage": "Big data processing, historical data migration, batch ETL jobs",
+          "deployment": "Managed Clusters / Serverless",
+          "icon": "./assets/icons/gcp/dataproc.png"
+        },
+        {
+          "service": "Looker / Looker Studio",
+          "type": "Business Intelligence (BI)",
+          "usage": "Data visualization, dashboards, self-service analytics",
+          "deployment": "SaaS",
+          "icon": "./assets/icons/gcp/looker.png"
+        }
+      ],
+      "data_orchestration_transformation": [
+        {
+          "service": "Dataflow",
+          "type": "Unified Stream & Batch Processing",
+          "usage": "Real-time ETL, complex stream processing using Apache Beam, high-scale data movement",
+          "deployment": "Serverless",
+          "icon": "./assets/icons/gcp/dataflow.png"
+        },
+        {
+          "service": "Cloud Composer",
+          "type": "Workflow Orchestration (Managed Airflow)",
+          "usage": "Complex pipeline scheduling, dependency management across multiple GCP services, hybrid/multi-cloud workflows",
+          "deployment": "Managed Kubernetes (GKE)",
+          "icon": "./assets/icons/gcp/composer.png"
+        },
+        {
+          "service": "Cloud Data Fusion",
+          "type": "Visual Data Integration",
+          "usage": "No-code/low-code ETL pipelines, data source connectors, enterprise data integration",
+          "deployment": "Managed Service",
+          "icon": "./assets/icons/gcp/data_fusion.png"
+        },
+        {
+          "service": "dbt (Data Build Tool)",
+          "type": "Data Transformation",
+          "usage": "SQL-based transformations within BigQuery, modular data modeling, version-controlled analytics engineering",
+          "deployment": "Cloud / Self-hosted",
+          "icon": "./assets/icons/gcp/dbt.png"
+        }
+      ]
+    }
+  }
+}
