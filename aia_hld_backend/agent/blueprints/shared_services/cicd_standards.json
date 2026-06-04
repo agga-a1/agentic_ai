@@ -1,0 +1,80 @@
+{
+  "schema_version": "2026.05.11-consolidated-v1",
+  "blueprint_id": "SRC_CICD_STANDARDS",
+  "source_file": "cicd_standards.json",
+  "domain": "cicd",
+  "cloud": "multi_cloud",
+  "blueprint_type": "standard",
+  "priority": "source_standard",
+  "services": [
+    "GitHub Actions",
+    "Jenkins",
+    "Azure DevOps",
+    "Cloud Build",
+    "CodePipeline"
+  ],
+  "capabilities": [
+    "ci",
+    "cd",
+    "branch_protection",
+    "sast",
+    "dast",
+    "self_hosted_runner"
+  ],
+  "keywords": [
+    "Azure DevOps",
+    "CI/CD",
+    "Cloud Build",
+    "CodePipeline",
+    "DevSecOps",
+    "GitHub Actions",
+    "Jenkins",
+    "ado",
+    "branch_protection",
+    "cd",
+    "ci",
+    "dast",
+    "deployment",
+    "jenkins",
+    "pipeline",
+    "release",
+    "release pipeline",
+    "sast",
+    "scan thresholds",
+    "self_hosted_runner"
+  ],
+  "aliases": [
+    "CI/CD",
+    "DevSecOps",
+    "release pipeline"
+  ],
+  "hld_usage": {
+    "use_when": "Use this source standard when relevant to matching services, capabilities, NFR, security, cost, deployment or operations requirements.",
+    "blank_prevention": "If exact values are missing, use this as governing standard and combine with generic fallback patterns."
+  },
+  "retrieval_text": "cicd_standards.json | cicd | multi_cloud | standard | GitHub Actions | Jenkins | Azure DevOps | Cloud Build | CodePipeline | ci | cd | branch_protection | sast | dast | self_hosted_runner | pipeline | deployment | release | scan thresholds | jenkins | ado | CI/CD | DevSecOps | release pipeline | {\"platforms\": {\"github_actions\": {\"required_runners\": \"self-hosted\", \"enforce_branch_protection\": true}, \"jenkins\": {\"agent_type\": \"kubernetes\", \"plugins_allowlist\": [\"git\", \"pipeline\", \"docker-workflow\"]}, \"ado\": {\"organization\": \"corp-dev\", \"project_visibility\": \"private\"}}, \"scan_thresholds\": {\"sast\": \"medium\", \"dast\": \"high\"}}",
+  "source_payload": {
+    "platforms": {
+      "github_actions": {
+        "required_runners": "self-hosted",
+        "enforce_branch_protection": true
+      },
+      "jenkins": {
+        "agent_type": "kubernetes",
+        "plugins_allowlist": [
+          "git",
+          "pipeline",
+          "docker-workflow"
+        ]
+      },
+      "ado": {
+        "organization": "corp-dev",
+        "project_visibility": "private"
+      }
+    },
+    "scan_thresholds": {
+      "sast": "medium",
+      "dast": "high"
+    }
+  }
+}

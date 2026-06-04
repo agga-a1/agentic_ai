@@ -1,0 +1,54 @@
+{
+  "schema_version": "2026.05.11-consolidated-v1",
+  "blueprint_id": "SRC_NFR_GLOBAL_STANDARDS",
+  "source_file": "nfr_global_standards.json",
+  "domain": "nfr",
+  "cloud": "generic",
+  "blueprint_type": "global_standard",
+  "priority": "source_standard",
+  "services": [
+    "Cloud KMS",
+    "IAM",
+    "Global External HTTP(S) Load Balancer"
+  ],
+  "capabilities": [
+    "encryption",
+    "iam",
+    "load_balancing",
+    "compute_ha"
+  ],
+  "keywords": [
+    "Cloud KMS",
+    "Global External HTTP(S) Load Balancer",
+    "IAM",
+    "compute_ha",
+    "encryption",
+    "encryption at rest",
+    "global nfr",
+    "global standard",
+    "iam",
+    "least privilege",
+    "load_balancing",
+    "production tier"
+  ],
+  "aliases": [
+    "global nfr"
+  ],
+  "hld_usage": {
+    "use_when": "Use this source standard when relevant to matching services, capabilities, NFR, security, cost, deployment or operations requirements.",
+    "blank_prevention": "If exact values are missing, use this as governing standard and combine with generic fallback patterns."
+  },
+  "retrieval_text": "nfr_global_standards.json | nfr | generic | global_standard | Cloud KMS | IAM | Global External HTTP(S) Load Balancer | encryption | iam | load_balancing | compute_ha | global standard | encryption at rest | least privilege | production tier | global nfr | {\"pattern_id\": \"NFR_GLOBAL_BASE\", \"scope\": \"Global\", \"security\": {\"encryption_at_rest\": \"Mandatory. Default: Google-managed. Optional: CMEK ($1/key/month).\", \"iam\": \"Principle of Least Privilege (PoLP) required for all service accounts.\"}, \"reliability\": {\"compute_ha\": \"For 'Production' tier, min_instances = 2 across distinct zones.\", \"load_balancing\": \"Global External HTTP(S) Load Balancer for public endpoints.\"}}",
+  "source_payload": {
+    "pattern_id": "NFR_GLOBAL_BASE",
+    "scope": "Global",
+    "security": {
+      "encryption_at_rest": "Mandatory. Default: Google-managed. Optional: CMEK ($1/key/month).",
+      "iam": "Principle of Least Privilege (PoLP) required for all service accounts."
+    },
+    "reliability": {
+      "compute_ha": "For 'Production' tier, min_instances = 2 across distinct zones.",
+      "load_balancing": "Global External HTTP(S) Load Balancer for public endpoints."
+    }
+  }
+}

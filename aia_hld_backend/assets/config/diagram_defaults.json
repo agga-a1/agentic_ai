@@ -1,0 +1,76 @@
+{
+  "graph_font_size": 16,
+  "cluster_font_size": 15,
+  "node_font_size": 13,
+  "edge_font_size": 10,
+
+  "node_card_size": [
+    340,
+    200
+  ],
+  "node_card_font_size": 24,
+  "node_card_width_in": 2.35,
+  "node_card_height_in": 1.38,
+
+  "pdf_max_height_px": 820,
+
+  "force_rankdir": "LR",
+  "graph_splines": "polyline",
+  "graph_ranksep": 0.55,
+  "graph_nodesep": 0.32,
+  "graph_pad": 0.12,
+  "graph_overlap": false,
+  "graph_output_order": "edgesfirst",
+  "graph_newrank": true,
+
+  "edge_penwidth": 2.0,
+  "edge_minlen": 1,
+  "edge_arrowsize": 0.75,
+
+  "legend_title_font_size": 24,
+  "legend_item_font_size": 14,
+  "legend_heading_label": "Flow Legend",
+  "legend_border_color": "#8A8F98",
+  "legend_fill_color": "#F8FAFC",
+  "legend_title_color": "#202124",
+  "legend_item_font_color": "#202124",
+  "legend_item_fill_color": "#FFFFFF",
+  "legend_margin": 18,
+  "legend_pad": 0.18,
+  "legend_nodesep": 0.18,
+  "legend_ranksep": 0.18,
+  "legend_edge_penwidth": 2.2,
+  "legend_edge_arrowsize": 0.75,
+
+  "node_default_fill": "#F8F9FA",
+  "node_default_border": "#DADCE0",
+  "node_default_font": "#202124",
+  "node_default_margin": "0.10,0.06",
+  "node_default_penwidth": 1.4,
+
+  "fallback_card_badge_enabled": true,
+  "fallback_card_badge_fill": "#FFFFFF",
+  "fallback_card_badge_font_size": 24,
+  "fallback_card_initials_max_chars": 3,
+
+  "graph_ratio": "compress",
+  "graph_concentrate": true,
+  "graph_compound": true,
+  "graph_dpi": 200,
+
+  "trim_png_whitespace": true,
+  "trim_png_background_threshold": 248,
+  "trim_png_padding_px": 16,
+
+  "skip_unconnected_nodes": false,
+
+  "cluster_fill_color": "#F3F8FF",
+  "cluster_border_color": "#A8C7FA",
+  "cluster_font_color": "#174EA6",
+  "cluster_style": "rounded,filled",
+  "cluster_penwidth": 1.5,
+  "cluster_margin": 14,
+  "cluster_label_bold": true,
+  "node_card_text_bold": true
+
+}

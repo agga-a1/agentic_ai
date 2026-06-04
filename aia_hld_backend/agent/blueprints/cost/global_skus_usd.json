@@ -1,0 +1,118 @@
+{
+  "schema_version": "2026.05.11-consolidated-v1",
+  "blueprint_id": "SRC_GLOBAL_SKUS_USD",
+  "source_file": "global_skus_usd.json",
+  "domain": "cost",
+  "cloud": "gcp",
+  "blueprint_type": "cost_catalog",
+  "priority": "source_standard",
+  "services": [
+    "Cloud Run",
+    "Cloud Functions v2",
+    "Compute Engine",
+    "GKE Autopilot",
+    "Dataproc Serverless",
+    "BigQuery",
+    "GCS",
+    "Pub/Sub",
+    "Cloud SQL",
+    "Workflows",
+    "Cloud Scheduler"
+  ],
+  "capabilities": [
+    "sku",
+    "price",
+    "cost_estimation"
+  ],
+  "keywords": [
+    "BigQuery",
+    "Cloud Functions v2",
+    "Cloud Run",
+    "Cloud SQL",
+    "Cloud Scheduler",
+    "Compute Engine",
+    "Dataproc Serverless",
+    "GCS",
+    "GKE Autopilot",
+    "Pub/Sub",
+    "TB scanned",
+    "Workflows",
+    "cost",
+    "cost catalog",
+    "cost_estimation",
+    "price",
+    "pricing",
+    "sku",
+    "usd",
+    "vCPU-hour"
+  ],
+  "aliases": [
+    "cost catalog"
+  ],
+  "hld_usage": {
+    "use_when": "Use this source standard when relevant to matching services, capabilities, NFR, security, cost, deployment or operations requirements.",
+    "blank_prevention": "If exact values are missing, use this as governing standard and combine with generic fallback patterns."
+  },
+  "retrieval_text": "global_skus_usd.json | cost | gcp | cost_catalog | Cloud Run | Cloud Functions v2 | Compute Engine | GKE Autopilot | Dataproc Serverless | BigQuery | GCS | Pub/Sub | Cloud SQL | Workflows | Cloud Scheduler | sku | price | cost_estimation | sku | usd | pricing | cost | vCPU-hour | TB scanned | cost catalog | {\"pattern_id\": \"GLOBAL_SKU_USD_2026\", \"currency\": \"USD\", \"last_updated\": \"2026-04-01\", \"services\": {\"compute\": {\"Cloud_Run\": {\"unit\": \"vCPU-hour\", \"price\": 0.08}, \"Cloud_Functions_v2\": {\"unit\": \"1M_invocations\", \"price\": 0.4}, \"GCE_N2_Standard\": {\"unit\": \"vCPU-hour\", \"price\": 0.0475}, \"GKE_Autopilot\": {\"unit\": \"vCPU-hour\", \"price\": 0.0445}, \"Dataproc_Serverless\": {\"unit\": \"DCU-hour\", \"price\": 0.6}}, \"data_and_storage\": {\"BigQuery_Analysis\": {\"unit\": \"TB_scanned\", \"price\": 6.25}, \"BigQuery_Storage\": {\"unit\": \"GB-month\", \"price\": 0.02}, \"GCS_Standard\": {\"unit\": \"GB-month\", \"price\": 0.02}, \"PubSub_Throughput\": {\"unit\": \"GB\", \"price\": 40.0}, \"Cloud_SQL_vCPU\": {\"unit\": \"vCPU-hour\", \"price\": 0.0413}}, \"orchestration\": {\"Workflows\": {\"unit\": \"1k_steps\", \"price\": 0.01}, \"Cloud_Scheduler\": {\"unit\": \"job-month\", \"price\": 0.1}}}}",
+  "source_payload": {
+    "pattern_id": "GLOBAL_SKU_USD_2026",
+    "currency": "USD",
+    "last_updated": "2026-04-01",
+    "services": {
+      "compute": {
+        "Cloud_Run": {
+          "unit": "vCPU-hour",
+          "price": 0.08
+        },
+        "Cloud_Functions_v2": {
+          "unit": "1M_invocations",
+          "price": 0.4
+        },
+        "GCE_N2_Standard": {
+          "unit": "vCPU-hour",
+          "price": 0.0475
+        },
+        "GKE_Autopilot": {
+          "unit": "vCPU-hour",
+          "price": 0.0445
+        },
+        "Dataproc_Serverless": {
+          "unit": "DCU-hour",
+          "price": 0.6
+        }
+      },
+      "data_and_storage": {
+        "BigQuery_Analysis": {
+          "unit": "TB_scanned",
+          "price": 6.25
+        },
+        "BigQuery_Storage": {
+          "unit": "GB-month",
+          "price": 0.02
+        },
+        "GCS_Standard": {
+          "unit": "GB-month",
+          "price": 0.02
+        },
+        "PubSub_Throughput": {
+          "unit": "GB",
+          "price": 40.0
+        },
+        "Cloud_SQL_vCPU": {
+          "unit": "vCPU-hour",
+          "price": 0.0413
+        }
+      },
+      "orchestration": {
+        "Workflows": {
+          "unit": "1k_steps",
+          "price": 0.01
+        },
+        "Cloud_Scheduler": {
+          "unit": "job-month",
+          "price": 0.1
+        }
+      }
+    }
+  }
+}

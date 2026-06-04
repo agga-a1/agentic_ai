@@ -1,0 +1,68 @@
+{
+  "schema_version": "2026.05.11-consolidated-v1",
+  "blueprint_id": "SRC_CONTAINER_REGISTRY",
+  "source_file": "container_registry.json",
+  "domain": "devops_artifacts",
+  "cloud": "multi_cloud",
+  "blueprint_type": "standard",
+  "priority": "source_standard",
+  "services": [
+    "Artifact Registry",
+    "Amazon ECR",
+    "Azure Container Registry"
+  ],
+  "capabilities": [
+    "container_registry",
+    "image_scanning",
+    "vulnerability_scanning",
+    "cleanup_policy",
+    "replication"
+  ],
+  "keywords": [
+    "ACR",
+    "Amazon ECR",
+    "Artifact Registry",
+    "Azure Container Registry",
+    "ECR",
+    "GCR",
+    "block vulnerable images",
+    "cleanup_policy",
+    "container image",
+    "container_registry",
+    "image_scanning",
+    "private registry",
+    "registry",
+    "replication",
+    "scan on push",
+    "vulnerability_scanning"
+  ],
+  "aliases": [
+    "ECR",
+    "ACR",
+    "GCR",
+    "Artifact Registry"
+  ],
+  "hld_usage": {
+    "use_when": "Use this source standard when relevant to matching services, capabilities, NFR, security, cost, deployment or operations requirements.",
+    "blank_prevention": "If exact values are missing, use this as governing standard and combine with generic fallback patterns."
+  },
+  "retrieval_text": "container_registry.json | devops_artifacts | multi_cloud | standard | Artifact Registry | Amazon ECR | Azure Container Registry | container_registry | image_scanning | vulnerability_scanning | cleanup_policy | replication | container image | registry | scan on push | block vulnerable images | private registry | ECR | ACR | GCR | Artifact Registry | {\"registry_type\": \"private\", \"vulnerability_scanning\": {\"scan_on_push\": true, \"block_vulnerable_images\": true, \"severity_cutoff\": \"high\"}, \"cleanup_policy\": {\"keep_last\": 10, \"expire_older_than\": \"30d\"}, \"replication\": {\"regions\": [\"us-east-1\", \"eu-central-1\"]}}",
+  "source_payload": {
+    "registry_type": "private",
+    "vulnerability_scanning": {
+      "scan_on_push": true,
+      "block_vulnerable_images": true,
+      "severity_cutoff": "high"
+    },
+    "cleanup_policy": {
+      "keep_last": 10,
+      "expire_older_than": "30d"
+    },
+    "replication": {
+      "regions": [
+        "us-east-1",
+        "eu-central-1"
+      ]
+    }
+  }
+}

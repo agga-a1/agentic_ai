@@ -1,0 +1,18 @@
+
+PROJECT_ID: vf-uk-churchill-alpha-lab
+REGION: global
+LLM_MODEL: gemini-2.5-flash
+BQ_DATASET_ID: staging
+BQ_TABLE_ID: shoe_items
+GCS_BUCKET_NAME: vf-ik-churchill-alpha-lab-aia
+EMBEDDING_MODEL_NAME: text-embedding-004
+
+# IMPORTANT: Setting this flag to 1 will disable web driver
+DISABLE_WEB_DRIVER: 1
+RUN_AGENT_WITH_DEBUG: False
+SERVE_WEB_INTERFACE: True
+SESSION_DB_URL: "sqlite:///./sessions.db"
+
+#Proxy Model Variables
+LLM_PROXY_ENDPOINT: https://proxy-service-885279334155.europe-west2.run.app
+

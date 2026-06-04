@@ -1,0 +1,76 @@
+{
+  "schema_version": "2026.05.11-consolidated-v1",
+  "blueprint_id": "SRC_LOGGING_MONITORING",
+  "source_file": "logging_monitoring.json",
+  "domain": "observability",
+  "cloud": "multi_cloud",
+  "blueprint_type": "standard",
+  "priority": "source_standard",
+  "services": [
+    "Cloud Logging",
+    "Cloud Monitoring",
+    "Amazon CloudWatch",
+    "Azure Monitor",
+    "Prometheus",
+    "ELK Stack"
+  ],
+  "capabilities": [
+    "logs",
+    "metrics",
+    "alerts",
+    "retention",
+    "aggregation"
+  ],
+  "keywords": [
+    "Amazon CloudWatch",
+    "Azure Monitor",
+    "Cloud Logging",
+    "Cloud Monitoring",
+    "ELK Stack",
+    "Prometheus",
+    "aggregation",
+    "alerts",
+    "elk",
+    "logging",
+    "logs",
+    "metrics",
+    "monitoring",
+    "observability",
+    "operations",
+    "ops",
+    "prometheus",
+    "retention"
+  ],
+  "aliases": [
+    "ops",
+    "observability",
+    "logs",
+    "metrics"
+  ],
+  "hld_usage": {
+    "use_when": "Use this source standard when relevant to matching services, capabilities, NFR, security, cost, deployment or operations requirements.",
+    "blank_prevention": "If exact values are missing, use this as governing standard and combine with generic fallback patterns."
+  },
+  "retrieval_text": "logging_monitoring.json | observability | multi_cloud | standard | Cloud Logging | Cloud Monitoring | Amazon CloudWatch | Azure Monitor | Prometheus | ELK Stack | logs | metrics | alerts | retention | aggregation | monitoring | logging | alerts | prometheus | elk | operations | ops | observability | logs | metrics | {\"retention_days\": 90, \"aggregation\": {\"tool\": \"ELK_Stack\", \"endpoints\": [\"https://log-aggregator.internal:9200\"]}, \"metrics\": {\"provider\": \"Prometheus\", \"scrape_interval\": \"15s\"}, \"alerts\": {\"default_channel\": \"#ops-alerts\", \"severity_levels\": [\"critical\", \"warning\", \"info\"]}}",
+  "source_payload": {
+    "retention_days": 90,
+    "aggregation": {
+      "tool": "ELK_Stack",
+      "endpoints": [
+        "https://log-aggregator.internal:9200"
+      ]
+    },
+    "metrics": {
+      "provider": "Prometheus",
+      "scrape_interval": "15s"
+    },
+    "alerts": {
+      "default_channel": "#ops-alerts",
+      "severity_levels": [
+        "critical",
+        "warning",
+        "info"
+      ]
+    }
+  }
+}
