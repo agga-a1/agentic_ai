@@ -5,7 +5,7 @@ __pycache__
 *$py.class
 *.pdf
 *.html
-*.md
+# *.md
 *.docx
 # C extensions
 *.so
