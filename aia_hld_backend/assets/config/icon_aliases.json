@@ -1,0 +1,699 @@
+{
+  "aliases": {
+    "gcs": [
+      "cloud_storage.png",
+      "gcs.png",
+      "google_cloud_storage.png"
+    ],
+    "storage": [
+      "cloud_storage.png",
+      "gcs.png",
+      "google_cloud_storage.png"
+    ],
+    "cloud storage": [
+      "cloud_storage.png",
+      "gcs.png",
+      "google_cloud_storage.png"
+    ],
+    "google cloud storage": [
+      "cloud_storage.png",
+      "gcs.png",
+      "google_cloud_storage.png"
+    ],
+    "bucket": [
+      "cloud_storage.png",
+      "gcs.png",
+      "google_cloud_storage.png"
+    ],
+    "gcs bucket": [
+      "cloud_storage.png",
+      "gcs.png",
+      "google_cloud_storage.png"
+    ],
+    "gcs landing bucket": [
+      "cloud_storage.png",
+      "gcs.png",
+      "google_cloud_storage.png"
+    ],
+    "gcs target bucket": [
+      "cloud_storage.png",
+      "gcs.png",
+      "google_cloud_storage.png"
+    ],
+    "gcs decrypted bucket": [
+      "cloud_storage.png",
+      "gcs.png",
+      "google_cloud_storage.png"
+    ],
+    "gcs encrypted bucket": [
+      "cloud_storage.png",
+      "gcs.png",
+      "google_cloud_storage.png"
+    ],
+    "encrypted bucket": [
+      "cloud_storage.png",
+      "gcs.png",
+      "google_cloud_storage.png"
+    ],
+    "decrypted bucket": [
+      "cloud_storage.png",
+      "gcs.png",
+      "google_cloud_storage.png"
+    ],
+    "encrypted landing bucket": [
+      "cloud_storage.png",
+      "gcs.png",
+      "google_cloud_storage.png"
+    ],
+    "decrypted target bucket": [
+      "cloud_storage.png",
+      "gcs.png",
+      "google_cloud_storage.png"
+    ],
+    "landing bucket": [
+      "cloud_storage.png",
+      "gcs.png",
+      "google_cloud_storage.png"
+    ],
+    "target bucket": [
+      "cloud_storage.png",
+      "gcs.png",
+      "google_cloud_storage.png"
+    ],
+    "landing zone": [
+      "cloud_storage.png",
+      "gcs.png",
+      "google_cloud_storage.png"
+    ],
+    "target zone": [
+      "cloud_storage.png",
+      "gcs.png",
+      "google_cloud_storage.png"
+    ],
+
+    "cloud functions": [
+      "cloud_functions.png",
+      "cloud_function.png",
+      "cloud_run.png"
+    ],
+    "cloud function": [
+      "cloud_functions.png",
+      "cloud_function.png",
+      "cloud_run.png"
+    ],
+    "google cloud functions": [
+      "cloud_functions.png",
+      "cloud_function.png",
+      "cloud_run.png"
+    ],
+    "google cloud function": [
+      "cloud_functions.png",
+      "cloud_function.png",
+      "cloud_run.png"
+    ],
+    "functions": [
+      "cloud_functions.png",
+      "cloud_function.png"
+    ],
+    "function": [
+      "cloud_functions.png",
+      "cloud_function.png"
+    ],
+    "decryptor": [
+      "cloud_functions.png",
+      "cloud_function.png",
+      "cloud_run.png"
+    ],
+    "decryptor function": [
+      "cloud_functions.png",
+      "cloud_function.png",
+      "cloud_run.png"
+    ],
+    "cloud function decryptor": [
+      "cloud_functions.png",
+      "cloud_function.png",
+      "cloud_run.png"
+    ],
+    "decryption function": [
+      "cloud_functions.png",
+      "cloud_function.png",
+      "cloud_run.png"
+    ],
+    "decrypt service": [
+      "cloud_functions.png",
+      "cloud_function.png",
+      "cloud_run.png"
+    ],
+    "serverless compute": [
+      "cloud_functions.png",
+      "cloud_function.png",
+      "cloud_run.png"
+    ],
+    "cloud run": [
+      "cloud_run.png"
+    ],
+    "cloudrun": [
+      "cloud_run.png"
+    ],
+
+    "eventarc": [
+      "eventarc.png",
+      "cloud_eventarc.png",
+      "event_arc.png",
+      "cloud_pubsub.png",
+      "pubsub.png"
+    ],
+    "cloud eventarc": [
+      "eventarc.png",
+      "cloud_eventarc.png",
+      "event_arc.png"
+    ],
+    "event arc": [
+      "eventarc.png",
+      "cloud_eventarc.png",
+      "event_arc.png"
+    ],
+    "event router": [
+      "eventarc.png",
+      "cloud_eventarc.png",
+      "event_arc.png"
+    ],
+    "event routing": [
+      "eventarc.png",
+      "cloud_eventarc.png",
+      "event_arc.png"
+    ],
+    "gcs notification": [
+      "eventarc.png",
+      "cloud_eventarc.png",
+      "cloud_pubsub.png",
+      "pubsub.png"
+    ],
+    "gcs notification trigger": [
+      "eventarc.png",
+      "cloud_eventarc.png",
+      "cloud_pubsub.png",
+      "pubsub.png"
+    ],
+    "gcs event": [
+      "eventarc.png",
+      "cloud_eventarc.png",
+      "cloud_pubsub.png",
+      "pubsub.png"
+    ],
+    "gcs event notification": [
+      "eventarc.png",
+      "cloud_eventarc.png",
+      "cloud_pubsub.png",
+      "pubsub.png"
+    ],
+    "object notification": [
+      "eventarc.png",
+      "cloud_eventarc.png",
+      "cloud_pubsub.png",
+      "pubsub.png"
+    ],
+    "object finalization notification": [
+      "eventarc.png",
+      "cloud_eventarc.png",
+      "cloud_pubsub.png",
+      "pubsub.png"
+    ],
+    "trigger": [
+      "eventarc.png",
+      "cloud_eventarc.png",
+      "cloud_pubsub.png",
+      "pubsub.png"
+    ],
+    "pubsub": [
+      "cloud_pubsub.png",
+      "pubsub.png"
+    ],
+    "pub sub": [
+      "cloud_pubsub.png",
+      "pubsub.png"
+    ],
+    "cloud pubsub": [
+      "cloud_pubsub.png",
+      "pubsub.png"
+    ],
+    "cloud pub sub": [
+      "cloud_pubsub.png",
+      "pubsub.png"
+    ],
+
+    "kms": [
+      "cloud_kms.png",
+      "kms.png",
+      "key_management_service.png"
+    ],
+    "cloud kms": [
+      "cloud_kms.png",
+      "kms.png",
+      "key_management_service.png"
+    ],
+    "google cloud kms": [
+      "cloud_kms.png",
+      "kms.png",
+      "key_management_service.png"
+    ],
+    "google cloud key management service": [
+      "cloud_kms.png",
+      "kms.png",
+      "key_management_service.png"
+    ],
+    "cloud key management service": [
+      "cloud_kms.png",
+      "kms.png",
+      "key_management_service.png"
+    ],
+    "key management service": [
+      "cloud_kms.png",
+      "kms.png",
+      "key_management_service.png"
+    ],
+    "cmek": [
+      "cloud_kms.png",
+      "kms.png",
+      "key_management_service.png"
+    ],
+    "customer managed encryption keys": [
+      "cloud_kms.png",
+      "kms.png",
+      "key_management_service.png"
+    ],
+    "key management": [
+      "cloud_kms.png",
+      "kms.png",
+      "key_management_service.png"
+    ],
+    "key access": [
+      "cloud_kms.png",
+      "kms.png",
+      "key_management_service.png"
+    ],
+
+    "secret manager": [
+      "secret_manager.png",
+      "secrets_manager.png"
+    ],
+    "secretmanager": [
+      "secret_manager.png",
+      "secrets_manager.png"
+    ],
+    "google secret manager": [
+      "secret_manager.png",
+      "secrets_manager.png"
+    ],
+    "google cloud secret manager": [
+      "secret_manager.png",
+      "secrets_manager.png"
+    ],
+    "secrets manager": [
+      "secret_manager.png",
+      "secrets_manager.png"
+    ],
+    "secret access": [
+      "secret_manager.png",
+      "secrets_manager.png"
+    ],
+    "iam": [
+      "cloud_iam.png",
+      "identity_and_access_management.png"
+    ],
+    "cloud iam": [
+      "cloud_iam.png",
+      "identity_and_access_management.png"
+    ],
+    "identity and access management": [
+      "cloud_iam.png",
+      "identity_and_access_management.png"
+    ],
+
+    "hashicorp vault": [
+      "hashicorp_vault.png",
+      "vault.png",
+      "secret_manager.png",
+      "secrets_manager.png"
+    ],
+    "hashicorp": [
+      "hashicorp_vault.png",
+      "vault.png",
+      "secret_manager.png",
+      "secrets_manager.png"
+    ],
+    "vault": [
+      "hashicorp_vault.png",
+      "vault.png",
+      "secret_manager.png",
+      "secrets_manager.png"
+    ],
+    "hashicorp vault key store": [
+      "hashicorp_vault.png",
+      "vault.png",
+      "secret_manager.png",
+      "secrets_manager.png"
+    ],
+    "gpg key store": [
+      "hashicorp_vault.png",
+      "vault.png",
+      "secret_manager.png",
+      "secrets_manager.png"
+    ],
+    "gpg keys": [
+      "hashicorp_vault.png",
+      "vault.png",
+      "secret_manager.png",
+      "secrets_manager.png"
+    ],
+
+    "bq": [
+      "bigquery.png"
+    ],
+    "bigquery": [
+      "bigquery.png"
+    ],
+    "big query": [
+      "bigquery.png"
+    ],
+    "google bigquery": [
+      "bigquery.png"
+    ],
+    "google big query": [
+      "bigquery.png"
+    ],
+
+    "logging": [
+      "cloud_logging.png",
+      "logging.png"
+    ],
+    "cloud logging": [
+      "cloud_logging.png",
+      "logging.png"
+    ],
+    "google cloud logging": [
+      "cloud_logging.png",
+      "logging.png"
+    ],
+    "logs": [
+      "cloud_logging.png",
+      "logging.png"
+    ],
+    "monitoring": [
+      "cloud_monitoring.png",
+      "monitoring.png"
+    ],
+    "cloud monitoring": [
+      "cloud_monitoring.png",
+      "monitoring.png"
+    ],
+    "google cloud monitoring": [
+      "cloud_monitoring.png",
+      "monitoring.png"
+    ],
+    "observability": [
+      "cloud_monitoring.png",
+      "monitoring.png",
+      "cloud_logging.png",
+      "logging.png"
+    ],
+    "metrics": [
+      "cloud_monitoring.png",
+      "monitoring.png"
+    ],
+    "alerts": [
+      "cloud_monitoring.png",
+      "monitoring.png"
+    ],
+
+    "vpn": [
+      "cloud_vpn.png",
+      "vpn.png"
+    ],
+    "cloud vpn": [
+      "cloud_vpn.png",
+      "vpn.png"
+    ],
+    "ha vpn": [
+      "cloud_vpn.png",
+      "vpn.png"
+    ],
+    "interconnect": [
+      "cloud_interconnect.png",
+      "interconnect.png"
+    ],
+    "cloud interconnect": [
+      "cloud_interconnect.png",
+      "interconnect.png"
+    ],
+    "google cloud interconnect": [
+      "cloud_interconnect.png",
+      "interconnect.png"
+    ],
+    "hybrid connectivity": [
+      "cloud_interconnect.png",
+      "interconnect.png",
+      "cloud_vpn.png",
+      "vpn.png"
+    ],
+    "hybrid connection": [
+      "cloud_interconnect.png",
+      "interconnect.png",
+      "cloud_vpn.png",
+      "vpn.png"
+    ],
+    "network connectivity": [
+      "cloud_interconnect.png",
+      "interconnect.png",
+      "cloud_vpn.png",
+      "vpn.png"
+    ],
+
+    "mft": [
+      "transfer.png",
+      "cloud_interconnect.png",
+      "file_transfer.png"
+    ],
+    "managed file transfer": [
+      "transfer.png",
+      "cloud_interconnect.png",
+      "file_transfer.png"
+    ],
+    "file transfer": [
+      "transfer.png",
+      "cloud_interconnect.png",
+      "file_transfer.png"
+    ],
+    "transfer": [
+      "transfer.png",
+      "cloud_interconnect.png",
+      "file_transfer.png"
+    ],
+    "storage transfer": [
+      "storage_transfer.png",
+      "transfer.png",
+      "cloud_storage.png"
+    ],
+    "storage transfer service": [
+      "storage_transfer.png",
+      "transfer.png",
+      "cloud_storage.png"
+    ],
+    "cloud storage transfer service": [
+      "storage_transfer.png",
+      "transfer.png",
+      "cloud_storage.png"
+    ],
+    "google cloud storage transfer service": [
+      "storage_transfer.png",
+      "transfer.png",
+      "cloud_storage.png"
+    ],
+
+    "cloud build": [
+      "cloud_build.png",
+      "cloudbuild.png"
+    ],
+    "google cloud build": [
+      "cloud_build.png",
+      "cloudbuild.png"
+    ],
+    "cloudbuild": [
+      "cloud_build.png",
+      "cloudbuild.png"
+    ],
+    "ci/cd": [
+      "cloud_build.png",
+      "cloudbuild.png"
+    ],
+    "cicd": [
+      "cloud_build.png",
+      "cloudbuild.png"
+    ],
+    "deployment pipeline": [
+      "cloud_build.png",
+      "cloudbuild.png"
+    ],
+    "build pipeline": [
+      "cloud_build.png",
+      "cloudbuild.png"
+    ],
+    "terraform": [
+      "terraform.png"
+    ],
+    "iac": [
+      "terraform.png"
+    ],
+    "infrastructure as code": [
+      "terraform.png"
+    ],
+
+    "teradata": [
+      "teradata.png",
+      "database.png",
+      "generic_db.png"
+    ],
+    "teradata db": [
+      "teradata.png",
+      "database.png",
+      "generic_db.png"
+    ],
+    "teradata database": [
+      "teradata.png",
+      "database.png",
+      "generic_db.png"
+    ],
+    "source system": [
+      "teradata.png",
+      "database.png",
+      "generic_db.png"
+    ],
+    "on premise source": [
+      "teradata.png",
+      "database.png",
+      "generic_db.png"
+    ],
+    "on prem source": [
+      "teradata.png",
+      "database.png",
+      "generic_db.png"
+    ],
+    "on-prem source": [
+      "teradata.png",
+      "database.png",
+      "generic_db.png"
+    ],
+
+    "collibra": [
+      "collibra.png",
+      "catalog.png",
+      "database.png",
+      "generic_db.png"
+    ],
+    "collibra app": [
+      "collibra.png",
+      "catalog.png",
+      "database.png",
+      "generic_db.png"
+    ],
+    "collibra application": [
+      "collibra.png",
+      "catalog.png",
+      "database.png",
+      "generic_db.png"
+    ],
+    "target system": [
+      "collibra.png",
+      "catalog.png",
+      "database.png",
+      "generic_db.png"
+    ],
+    "data governance": [
+      "collibra.png",
+      "catalog.png",
+      "database.png",
+      "generic_db.png"
+    ],
+    "data governance platform": [
+      "collibra.png",
+      "catalog.png",
+      "database.png",
+      "generic_db.png"
+    ],
+
+    "database": [
+      "database.png",
+      "generic_db.png"
+    ],
+    "db": [
+      "database.png",
+      "generic_db.png"
+    ],
+    "generic database": [
+      "database.png",
+      "generic_db.png"
+    ],
+    "catalog": [
+      "catalog.png",
+      "collibra.png"
+    ],
+    "data catalog": [
+      "catalog.png",
+      "collibra.png"
+    ],
+
+    "vertex ai": [
+      "vertex_ai.png",
+      "ai.png"
+    ],
+    "vertex": [
+      "vertex_ai.png",
+      "ai.png"
+    ],
+    "gemini": [
+      "vertex_ai.png",
+      "ai.png"
+    ],
+    "rag": [
+      "ai.png",
+      "vertex_ai.png"
+    ],
+    "retrieval augmented generation": [
+      "ai.png",
+      "vertex_ai.png"
+    ],
+    "agent": [
+      "agent.png",
+      "ai.png"
+    ],
+    "agentic ai": [
+      "agent.png",
+      "ai.png"
+    ],
+    "ai agent": [
+      "agent.png",
+      "ai.png"
+    ],
+    "llm": [
+      "ai.png",
+      "vertex_ai.png"
+    ],
+    "model": [
+      "ai.png",
+      "vertex_ai.png"
+    ],
+    "embedding": [
+      "ai.png",
+      "vertex_ai.png"
+    ],
+    "vector": [
+      "ai.png",
+      "vertex_ai.png"
+    ],
+    "vector database": [
+      "database.png",
+      "generic_db.png",
+      "ai.png"
+    ]
+  }
+}

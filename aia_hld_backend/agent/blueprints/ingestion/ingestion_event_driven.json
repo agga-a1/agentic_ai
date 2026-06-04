@@ -1,0 +1,81 @@
+{
+  "schema_version": "2026.05.11-consolidated-v1",
+  "blueprint_id": "SRC_INGESTION_EVENT_DRIVEN",
+  "source_file": "ingestion_event_driven.json",
+  "domain": "data_ingestion",
+  "cloud": "gcp",
+  "blueprint_type": "technical_blueprint",
+  "priority": "source_standard",
+  "services": [
+    "GCS",
+    "Cloud Pub/Sub",
+    "Eventarc",
+    "Cloud Run",
+    "Cloud Functions",
+    "Dataflow",
+    "BigQuery",
+    "Bigtable"
+  ],
+  "capabilities": [
+    "event_driven",
+    "storage_notification",
+    "pubsub",
+    "real_time_streaming"
+  ],
+  "keywords": [
+    "BigQuery",
+    "Bigtable",
+    "Cloud Functions",
+    "Cloud Pub/Sub",
+    "Cloud Run",
+    "Dataflow",
+    "Eventarc",
+    "GCS",
+    "event driven",
+    "event_driven",
+    "eventarc",
+    "near real time",
+    "pubsub",
+    "real_time_streaming",
+    "storage_notification",
+    "stream",
+    "streaming ingestion"
+  ],
+  "aliases": [
+    "streaming ingestion"
+  ],
+  "hld_usage": {
+    "use_when": "Use this source standard when relevant to matching services, capabilities, NFR, security, cost, deployment or operations requirements.",
+    "blank_prevention": "If exact values are missing, use this as governing standard and combine with generic fallback patterns."
+  },
+  "retrieval_text": "ingestion_event_driven.json | data_ingestion | gcp | technical_blueprint | GCS | Cloud Pub/Sub | Eventarc | Cloud Run | Cloud Functions | Dataflow | BigQuery | Bigtable | event_driven | storage_notification | pubsub | real_time_streaming | event driven | pubsub | eventarc | stream | near real time | streaming ingestion | {\"pattern_id\": \"INGEST_EVENT_DRIVEN\", \"layer\": \"technical_blueprint\", \"patterns\": [{\"name\": \"Storage Notification (Eventarc)\", \"trigger\": \"File Upload to GCS\", \"flow\": \"GCS -> Cloud Pub/Sub -> Eventarc -> Cloud Run/Functions\", \"use_case\": \"Automated file processing, image resizing, metadata extraction\", \"latency\": \"Near real-time (< 1s)\", \"infra_impact\": \"Requires GCS bucket notifications and Eventarc trigger permissions.\"}, {\"name\": \"Pub/Sub Messaging\", \"trigger\": \"Producer Push/Pull\", \"flow\": \"App/SaaS -> Pub/Sub Topic -> Dataflow/Cloud Run -> BigQuery\", \"use_case\": \"Microservices communication, telemetry, clickstream data\", \"latency\": \"Sub-second\", \"scaling\": \"Highly scalable, handles spikes natively.\"}, {\"name\": \"Real-time Streaming Feed\", \"trigger\": \"Continuous Stream\", \"flow\": \"IoT/Direct Socket -> Dataflow (Apache Beam) -> Bigtable/BigQuery\", \"use_case\": \"Financial tickers, IoT sensor monitoring, real-time fraud detection\", \"feature\": \"Windowing, Watermarking, and Late-data handling.\"}]}",
+  "source_payload": {
+    "pattern_id": "INGEST_EVENT_DRIVEN",
+    "layer": "technical_blueprint",
+    "patterns": [
+      {
+        "name": "Storage Notification (Eventarc)",
+        "trigger": "File Upload to GCS",
+        "flow": "GCS -> Cloud Pub/Sub -> Eventarc -> Cloud Run/Functions",
+        "use_case": "Automated file processing, image resizing, metadata extraction",
+        "latency": "Near real-time (< 1s)",
+        "infra_impact": "Requires GCS bucket notifications and Eventarc trigger permissions."
+      },
+      {
+        "name": "Pub/Sub Messaging",
+        "trigger": "Producer Push/Pull",
+        "flow": "App/SaaS -> Pub/Sub Topic -> Dataflow/Cloud Run -> BigQuery",
+        "use_case": "Microservices communication, telemetry, clickstream data",
+        "latency": "Sub-second",
+        "scaling": "Highly scalable, handles spikes natively."
+      },
+      {
+        "name": "Real-time Streaming Feed",
+        "trigger": "Continuous Stream",
+        "flow": "IoT/Direct Socket -> Dataflow (Apache Beam) -> Bigtable/BigQuery",
+        "use_case": "Financial tickers, IoT sensor monitoring, real-time fraud detection",
+        "feature": "Windowing, Watermarking, and Late-data handling."
+      }
+    ]
+  }
+}

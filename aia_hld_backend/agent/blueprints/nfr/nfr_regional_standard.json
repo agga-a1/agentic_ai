@@ -1,0 +1,51 @@
+{
+  "schema_version": "2026.05.11-consolidated-v1",
+  "blueprint_id": "SRC_NFR_REGIONAL_STANDARD",
+  "source_file": "nfr_regional_standard.json",
+  "domain": "nfr_compliance",
+  "cloud": "gcp",
+  "blueprint_type": "regional_standard",
+  "priority": "source_standard",
+  "services": [
+    "Cloud Storage",
+    "BigQuery"
+  ],
+  "capabilities": [
+    "data_residency",
+    "regional_compliance",
+    "metadata_restriction"
+  ],
+  "keywords": [
+    "BigQuery",
+    "Cloud Storage",
+    "compliance",
+    "data residency",
+    "data_residency",
+    "europe west2",
+    "london",
+    "metadata mirroring",
+    "metadata_restriction",
+    "region rule",
+    "regional",
+    "regional_compliance"
+  ],
+  "aliases": [
+    "compliance",
+    "region rule"
+  ],
+  "hld_usage": {
+    "use_when": "Use this source standard when relevant to matching services, capabilities, NFR, security, cost, deployment or operations requirements.",
+    "blank_prevention": "If exact values are missing, use this as governing standard and combine with generic fallback patterns."
+  },
+  "retrieval_text": "nfr_regional_standard.json | nfr_compliance | gcp | regional_standard | Cloud Storage | BigQuery | data_residency | regional_compliance | metadata_restriction | regional | europe west2 | london | data residency | metadata mirroring | compliance | region rule | {\"pattern_id\": \"NFR_REGIONAL_UK_HUB\", \"scope\": \"europe-west2\", \"category\": \"Compliance\", \"rules\": [\"Data must not leave London\", \"Metadata mirroring is forbidden\"], \"impact\": \"Limits GCS bucket selection to europe-west2 only.\"}",
+  "source_payload": {
+    "pattern_id": "NFR_REGIONAL_UK_HUB",
+    "scope": "europe-west2",
+    "category": "Compliance",
+    "rules": [
+      "Data must not leave London",
+      "Metadata mirroring is forbidden"
+    ],
+    "impact": "Limits GCS bucket selection to europe-west2 only."
+  }
+}

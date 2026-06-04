@@ -1,7 +1,0 @@
-{
-  "pattern_id": "NFR_REGIONAL_UK_HUB",
-  "scope": "europe-west2",
-  "category": "Compliance",
-  "rules": ["Data must not leave London", "Metadata mirroring is forbidden"],
-  "impact": "Limits GCS bucket selection to europe-west2 only."
-}

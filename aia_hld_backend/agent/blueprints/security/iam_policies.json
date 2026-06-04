@@ -1,0 +1,63 @@
+{
+  "schema_version": "2026.05.11-consolidated-v1",
+  "blueprint_id": "SRC_IAM_POLICIES",
+  "source_file": "iam_policies.json",
+  "domain": "identity_access",
+  "cloud": "multi_cloud",
+  "blueprint_type": "standard",
+  "priority": "source_standard",
+  "services": [
+    "IAM",
+    "AWS IAM",
+    "Microsoft Entra ID"
+  ],
+  "capabilities": [
+    "least_privilege",
+    "organization_condition",
+    "shared_service_access"
+  ],
+  "keywords": [
+    "AWS IAM",
+    "Entra ID",
+    "IAM",
+    "Microsoft Entra ID",
+    "RBAC",
+    "iam policy",
+    "least privilege",
+    "least_privilege",
+    "organization_condition",
+    "principal org",
+    "role",
+    "service account",
+    "shared_service_access"
+  ],
+  "aliases": [
+    "RBAC",
+    "IAM",
+    "Entra ID"
+  ],
+  "hld_usage": {
+    "use_when": "Use this source standard when relevant to matching services, capabilities, NFR, security, cost, deployment or operations requirements.",
+    "blank_prevention": "If exact values are missing, use this as governing standard and combine with generic fallback patterns."
+  },
+  "retrieval_text": "iam_policies.json | identity_access | multi_cloud | standard | IAM | AWS IAM | Microsoft Entra ID | least_privilege | organization_condition | shared_service_access | iam policy | least privilege | principal org | service account | role | RBAC | IAM | Entra ID | {\"Version\": \"2012-10-17\", \"Statement\": [{\"Sid\": \"AllowSharedServiceAccess\", \"Effect\": \"Allow\", \"Action\": [\"s3:Get*\", \"ecr:GetDownloadUrlForLayer\"], \"Resource\": \"*\", \"Condition\": {\"StringEquals\": {\"aws:PrincipalOrgID\": \"o-exampleorgid\"}}}]}",
+  "source_payload": {
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Sid": "AllowSharedServiceAccess",
+        "Effect": "Allow",
+        "Action": [
+          "s3:Get*",
+          "ecr:GetDownloadUrlForLayer"
+        ],
+        "Resource": "*",
+        "Condition": {
+          "StringEquals": {
+            "aws:PrincipalOrgID": "o-exampleorgid"
+          }
+        }
+      }
+    ]
+  }
+}

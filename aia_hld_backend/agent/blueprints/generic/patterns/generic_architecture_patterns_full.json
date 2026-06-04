@@ -1,0 +1,161 @@
+{
+  "schema_version": "2026.05.11-consolidated-v1",
+  "blueprint_id": "GENERIC_ARCHITECTURE_PATTERNS_FULL",
+  "domain": "architecture_patterns",
+  "cloud": "multi_cloud",
+  "priority": "generic_fallback_pattern",
+  "patterns": [
+    {
+      "pattern_id": "PAT_THREE_TIER_WEB_APP",
+      "name": "Three Tier Web Application",
+      "workload_types": [
+        "web_app",
+        "api_platform",
+        "enterprise_app"
+      ],
+      "flow": "User -> DNS/CDN/WAF -> Load Balancer/API Gateway -> App/API tier -> Database/Cache -> Observability",
+      "required_capabilities": [
+        "networking.edge",
+        "security.waf",
+        "compute.serverless_or_container_or_vm",
+        "database.relational_or_nosql",
+        "observability.logs_metrics"
+      ],
+      "blank_prevention": "If service detail is missing, select managed load balancer, managed compute, managed database, managed secrets and managed monitoring for the selected cloud."
+    },
+    {
+      "pattern_id": "PAT_MICROSERVICES",
+      "name": "Microservices Platform",
+      "workload_types": [
+        "microservices",
+        "container_platform",
+        "api_platform"
+      ],
+      "flow": "Client -> API Gateway -> Microservices on Kubernetes/serverless -> Event Bus -> Databases -> Monitoring",
+      "required_capabilities": [
+        "containers",
+        "api_management",
+        "eventing",
+        "observability",
+        "image_registry"
+      ],
+      "blank_prevention": "Use container or serverless mapping from provider catalog and include image scanning, service identity, network policy and central logs."
+    },
+    {
+      "pattern_id": "PAT_DATA_LAKEHOUSE",
+      "name": "Enterprise Data Lakehouse",
+      "workload_types": [
+        "data_platform",
+        "analytics",
+        "lakehouse"
+      ],
+      "flow": "Sources -> Landing/Raw zone -> Processing -> Curated zone -> Warehouse/Semantic layer -> BI/AI consumption",
+      "required_capabilities": [
+        "object_storage",
+        "batch_ingestion",
+        "streaming_ingestion",
+        "warehouse",
+        "governance",
+        "bi"
+      ],
+      "blank_prevention": "Always include landing/raw/curated/consumption zones, DQ checks, lineage, access control, encryption and retention."
+    },
+    {
+      "pattern_id": "PAT_EVENT_DRIVEN",
+      "name": "Event Driven Processing",
+      "workload_types": [
+        "event_driven",
+        "streaming",
+        "near_real_time"
+      ],
+      "flow": "Producer -> Topic/Event Bus -> Consumer Function/Container/Dataflow -> Target API/Database/Warehouse",
+      "required_capabilities": [
+        "messaging",
+        "eventing",
+        "serverless_or_stream_processing",
+        "dlq",
+        "monitoring"
+      ],
+      "blank_prevention": "Include schema validation, retry, DLQ, idempotency and replay handling."
+    },
+    {
+      "pattern_id": "PAT_BATCH_ETL",
+      "name": "Batch ETL/ELT Pipeline",
+      "workload_types": [
+        "batch",
+        "etl",
+        "elt",
+        "scheduled_pipeline"
+      ],
+      "flow": "Scheduler -> Orchestrator -> Extract -> Stage -> Transform -> Validate -> Publish",
+      "required_capabilities": [
+        "scheduler",
+        "orchestration",
+        "processing",
+        "warehouse",
+        "dq"
+      ],
+      "blank_prevention": "Include SLA window, retry/backfill, idempotency, reconciliation and DQ controls."
+    },
+    {
+      "pattern_id": "PAT_RAG",
+      "name": "Retrieval Augmented Generation",
+      "workload_types": [
+        "rag",
+        "genai",
+        "knowledge_assistant",
+        "document_assistant"
+      ],
+      "flow": "Sources -> Parse -> Chunk -> Embed -> Vector Store/Index -> Retrieve/Re-rank -> LLM -> Grounded Response",
+      "required_capabilities": [
+        "document_ingestion",
+        "embedding",
+        "vector_search",
+        "llm",
+        "guardrails",
+        "citation"
+      ],
+      "blank_prevention": "If vector store is missing, select provider-native vector search or database with vector capability and include ACL filters."
+    },
+    {
+      "pattern_id": "PAT_AGENTIC_AI",
+      "name": "Agentic AI Workflow",
+      "workload_types": [
+        "agentic_ai",
+        "copilot",
+        "automation_agent"
+      ],
+      "flow": "User/UI -> Agent Planner -> Tool Router -> RAG/API/Workflow Tools -> Policy Guard -> Final Response/Action",
+      "required_capabilities": [
+        "planner",
+        "tool_execution",
+        "state",
+        "human_approval",
+        "audit",
+        "observability"
+      ],
+      "blank_prevention": "Include tool allowlist, state management, retry limit, idempotency, prompt/tool audit and human approval for high-risk actions."
+    },
+    {
+      "pattern_id": "PAT_HYBRID_MULTI_CLOUD",
+      "name": "Hybrid / Multi-Cloud Connectivity",
+      "workload_types": [
+        "hybrid",
+        "multi_cloud",
+        "onprem_integration",
+        "cloud_to_cloud"
+      ],
+      "flow": "Source network -> Private connectivity/VPN/Interconnect/Direct Connect/ExpressRoute -> Cloud network -> Private endpoints/services",
+      "required_capabilities": [
+        "routing",
+        "dns",
+        "firewall",
+        "private_connectivity",
+        "identity",
+        "monitoring"
+      ],
+      "blank_prevention": "Always include CIDR validation, BGP/routing, DNS resolution, firewall allowlist, encryption, monitoring and data residency."
+    }
+  ],
+  "retrieval_text": "three tier microservices data lakehouse event driven batch ETL RAG agentic AI hybrid multi cloud architecture patterns fallback"
+}

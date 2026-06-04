@@ -1,0 +1,48 @@
+{
+  "schema_version": "2026.05.11-consolidated-v1",
+  "blueprint_id": "SRC_REGION_SCALING",
+  "source_file": "region_scaling.json",
+  "domain": "cost",
+  "cloud": "gcp",
+  "blueprint_type": "cost_standard",
+  "priority": "source_standard",
+  "services": [],
+  "capabilities": [
+    "regional_price_scaling",
+    "coefficient",
+    "region_cost"
+  ],
+  "keywords": [
+    "coefficient",
+    "europe-west1",
+    "europe-west2",
+    "price coefficient",
+    "region scaling",
+    "region_cost",
+    "regional cost",
+    "regional_price_scaling"
+  ],
+  "aliases": [
+    "regional cost"
+  ],
+  "hld_usage": {
+    "use_when": "Use this source standard when relevant to matching services, capabilities, NFR, security, cost, deployment or operations requirements.",
+    "blank_prevention": "If exact values are missing, use this as governing standard and combine with generic fallback patterns."
+  },
+  "retrieval_text": "region_scaling.json | cost | gcp | cost_standard | regional_price_scaling | coefficient | region_cost | region scaling | price coefficient | europe-west1 | europe-west2 | regional cost | {\"pattern_id\": \"REGIONAL_PRICE_SCALING\", \"logic\": \"Final_Price_USD = Base_Price_USD * Coefficient\", \"coefficients\": {\"us-central1\": 1.0, \"us-east4\": 1.1, \"europe-west1\": 1.15, \"europe-west2\": 1.2, \"europe-north1\": 1.12, \"asia-east1\": 1.15, \"australia-southeast1\": 1.25, \"southamerica-east1\": 1.4}, \"note\": \"Coefficients represent the average premium/discount compared to US-Central1.\"}",
+  "source_payload": {
+    "pattern_id": "REGIONAL_PRICE_SCALING",
+    "logic": "Final_Price_USD = Base_Price_USD * Coefficient",
+    "coefficients": {
+      "us-central1": 1.0,
+      "us-east4": 1.1,
+      "europe-west1": 1.15,
+      "europe-west2": 1.2,
+      "europe-north1": 1.12,
+      "asia-east1": 1.15,
+      "australia-southeast1": 1.25,
+      "southamerica-east1": 1.4
+    },
+    "note": "Coefficients represent the average premium/discount compared to US-Central1."
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": "2026.05.11-consolidated-v1",
+  "blueprint_id": "BLANK_PREVENTION_POLICY_FULL",
+  "domain": "agent_retrieval_policy",
+  "cloud": "generic",
+  "priority": "agent_control",
+  "policy": {
+    "do_not_hardcode_sections": true,
+    "use_existing_code_sections": true,
+    "retrieval_order": [
+      "source standards from uploaded files",
+      "provider service catalog by cloud/service/capability",
+      "generic architecture pattern by workload type",
+      "connectivity pattern if on-prem/cross-cloud/external API is present",
+      "mandatory cross-cutting controls",
+      "cost/NFR/deployment enrichers"
+    ],
+    "minimum_context_bundle": [
+      "source_standard_or_provider_catalog",
+      "generic_architecture_pattern",
+      "connectivity_if_applicable",
+      "security_observability_nfr_controls"
+    ],
+    "minimum_generated_content": [
+      "purpose",
+      "selected_components",
+      "logical_flow",
+      "network_connectivity",
+      "security_controls",
+      "observability",
+      "nfr_impact",
+      "cost_considerations",
+      "assumptions",
+      "open_decisions"
+    ],
+    "fallback_instruction": "Never leave a section blank. If exact service details are unavailable, produce provider-neutral architecture content using the generic pattern and clearly mark assumptions/open decisions.",
+    "chromadb_query_template": "section_title + section_intent + user_requirement + selected_cloud + selected_services + workload_type + connectivity_type + data_classification + nfr_tier"
+  },
+  "retrieval_text": "blank prevention no hardcoded sections fallback source standards provider catalog generic architecture controls assumptions open decisions"
+}

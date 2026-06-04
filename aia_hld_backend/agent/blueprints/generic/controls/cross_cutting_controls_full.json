@@ -1,0 +1,88 @@
+{
+  "schema_version": "2026.05.11-consolidated-v1",
+  "blueprint_id": "CROSS_CUTTING_CONTROLS_FULL",
+  "domain": "security_observability_nfr_operations",
+  "cloud": "multi_cloud",
+  "priority": "mandatory_enricher",
+  "controls": {
+    "identity_access": [
+      "least privilege",
+      "service accounts/managed identities/IAM roles",
+      "federated identity",
+      "MFA for privileged users",
+      "break-glass access",
+      "periodic access review"
+    ],
+    "network_security": [
+      "network segmentation",
+      "private endpoints/private service access",
+      "firewall allowlisting",
+      "WAF/DDoS protection",
+      "egress restriction",
+      "central inspection",
+      "secure DNS"
+    ],
+    "data_protection": [
+      "encryption at rest",
+      "encryption in transit",
+      "customer managed keys where required",
+      "DLP/tokenization for sensitive data",
+      "backup and retention",
+      "data residency"
+    ],
+    "secrets": [
+      "central secrets manager",
+      "no secrets in code",
+      "rotation policy",
+      "access audit",
+      "environment/owner tags"
+    ],
+    "ai_security": [
+      "prompt injection checks",
+      "tool allowlist",
+      "document ACL filters",
+      "PII redaction",
+      "model/prompt versioning",
+      "content safety",
+      "grounding and citation policy",
+      "human approval for high-risk actions"
+    ],
+    "observability": [
+      "structured logs",
+      "metrics",
+      "distributed traces",
+      "alerts",
+      "dashboards",
+      "SLO/SLA tracking",
+      "audit logs",
+      "runbooks",
+      "AI token/retrieval/tool metrics"
+    ],
+    "resilience": [
+      "multi-zone for production",
+      "multi-region for mission critical",
+      "backup restore testing",
+      "RPO/RTO definition",
+      "failover plan",
+      "DR test"
+    ],
+    "cost": [
+      "budgets and alerts",
+      "labels/tags",
+      "rightsizing",
+      "autoscaling",
+      "storage lifecycle",
+      "query optimization",
+      "committed use/reservations for stable workloads"
+    ],
+    "deployment": [
+      "branch protection",
+      "CI security scans",
+      "artifact/image scanning",
+      "blue-green/canary where required",
+      "rollback plan",
+      "approval gates"
+    ]
+  },
+  "retrieval_text": "security observability NFR operations IAM network data protection secrets AI security resilience cost deployment mandatory controls"
+}

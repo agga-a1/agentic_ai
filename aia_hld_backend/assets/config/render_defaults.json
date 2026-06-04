@@ -1,0 +1,61 @@
+{
+  "document": {
+    "title": "Universal High Level Design (HLD)",
+    "font_family": "Helvetica, Arial, sans-serif",
+    "font_size_pt": 10,
+    "primary_color": "#E60000",
+    "body_color": "#222",
+    "link_color": "#0645AD"
+  },
+  "pdf": {
+    "page_size": "A4",
+    "page_margin_cm": 1.25,
+    "paragraph_line_height": 1.35,
+    "table_margin": "10px 0 14px 0",
+    "table_header_background": "#f4f7f9",
+    "table_border_color": "#ccc",
+    "table_header_font_size_pt": 9,
+    "table_cell_font_size_pt": 8.5,
+    "diagram_max_height_px": 920,
+    "diagram_single_page": true,
+    "diagram_page_break_before": false,
+    "diagram_page_break_after": false
+  },
+  "toc": {
+    "enabled": true,
+    "clickable": true,
+    "include_heading_levels": [2, 3, 4],
+    "font_size_pt": 9.5,
+    "line_height": 1.35,
+    "indent_px": 16,
+    "link_color": "#0645AD",
+    "underline_links": true,
+    "level_2_bold": true,
+    "level_4_font_size_pt": 9
+  },
+  "docx": {
+    "font_name": "Calibri",
+    "font_size_pt": 10,
+    "top_margin_in": 0.65,
+    "bottom_margin_in": 0.65,
+    "left_margin_in": 0.7,
+    "right_margin_in": 0.7,
+    "logo_width_in": 2.0,
+    "max_image_width_fallback_in": 6.2,
+    "max_image_height_fallback_in": 8.0,
+    "toc_outline": "1-3",
+    "update_fields_on_open": true,
+    "diagram_single_page": true,
+    "diagram_page_break_before": false,
+    "diagram_page_break_after": true,
+    "editable_diagrams": {
+      "enabled": true,
+      "mode": "svg",
+      "fallback_mode": "png",
+      "embed_svg_instead_of_png": true,
+      "prefer_svg_icons": true,
+      "show_user_instruction": true,
+      "keep_source_links": true
+      }
+  }
+}

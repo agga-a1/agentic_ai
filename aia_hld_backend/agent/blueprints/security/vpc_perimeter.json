@@ -1,0 +1,69 @@
+{
+  "schema_version": "2026.05.11-consolidated-v1",
+  "blueprint_id": "SRC_VPC_PERIMETER",
+  "source_file": "vpc_perimeter.json",
+  "domain": "network_security",
+  "cloud": "gcp",
+  "blueprint_type": "standard",
+  "priority": "source_standard",
+  "services": [
+    "VPC Service Controls",
+    "Access Context Manager",
+    "VPC",
+    "Firewall Rules"
+  ],
+  "capabilities": [
+    "service_perimeter",
+    "ingress_rules",
+    "egress_rules",
+    "data_exfiltration_protection"
+  ],
+  "keywords": [
+    "Access Context Manager",
+    "Firewall Rules",
+    "VPC",
+    "VPC Service Controls",
+    "VPC-SC",
+    "VPCSC",
+    "corporate vpn",
+    "data_exfiltration_protection",
+    "egress",
+    "egress_rules",
+    "ingress",
+    "ingress_rules",
+    "secure zone",
+    "service perimeter",
+    "service_perimeter",
+    "vpc perimeter",
+    "vpcsc"
+  ],
+  "aliases": [
+    "VPC-SC",
+    "VPCSC",
+    "service perimeter"
+  ],
+  "hld_usage": {
+    "use_when": "Use this source standard when relevant to matching services, capabilities, NFR, security, cost, deployment or operations requirements.",
+    "blank_prevention": "If exact values are missing, use this as governing standard and combine with generic fallback patterns."
+  },
+  "retrieval_text": "vpc_perimeter.json | network_security | gcp | standard | VPC Service Controls | Access Context Manager | VPC | Firewall Rules | service_perimeter | ingress_rules | egress_rules | data_exfiltration_protection | vpc perimeter | vpcsc | secure zone | ingress | egress | corporate vpn | VPC-SC | VPCSC | service perimeter | {\"perimeter_name\": \"production-secure-zone\", \"ingress_rules\": [{\"description\": \"Allow HTTPS from Corporate VPN\", \"protocol\": \"tcp\", \"port\": 443, \"source\": \"10.0.0.0/8\"}], \"egress_rules\": [{\"description\": \"Restrict to Internal Services\", \"destination\": \"172.16.0.0/12\", \"action\": \"allow\"}], \"log_config\": \"enabled\"}",
+  "source_payload": {
+    "perimeter_name": "production-secure-zone",
+    "ingress_rules": [
+      {
+        "description": "Allow HTTPS from Corporate VPN",
+        "protocol": "tcp",
+        "port": 443,
+        "source": "10.0.0.0/8"
+      }
+    ],
+    "egress_rules": [
+      {
+        "description": "Restrict to Internal Services",
+        "destination": "172.16.0.0/12",
+        "action": "allow"
+      }
+    ],
+    "log_config": "enabled"
+  }
+}
